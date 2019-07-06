@@ -12,11 +12,11 @@ import RogueKit
 public enum ProductRepository: RKRepository {
     case bannerList
     
-    var domain: String { return "https://alodjinha.herokuapp.com" }
+    public var domain: String { return "https://alodjinha.herokuapp.com" }
     
-    func createRequest() throws -> RKRequest {
+    public func createRequest() throws -> RKRequest {
         switch self {
-        case let .bannerList
+        case .bannerList:
             return RKRequest.get("/banner")
         }
     }

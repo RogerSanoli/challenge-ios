@@ -5,6 +5,9 @@
       location = "group:Lodjinha.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:DungeonKit/DungeonKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PaladinKit/PaladinKit.xcodeproj">
    </FileRef>
    <FileRef

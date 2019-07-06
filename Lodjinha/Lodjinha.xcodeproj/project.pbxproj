@@ -12,6 +12,12 @@
 		D8BCE92022CFF6530016E8C0 /* PaladinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCE91F22CFF6530016E8C0 /* PaladinKit.framework */; };
 		D8BCE92222CFF7030016E8C0 /* RogueKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCE92122CFF7030016E8C0 /* RogueKit.framework */; };
 		D8BCE92422CFF7080016E8C0 /* WizardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCE92322CFF7080016E8C0 /* WizardKit.framework */; };
+		D8BCE95D22D11A810016E8C0 /* BannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE95C22D11A810016E8C0 /* BannerEntity.swift */; };
+		D8BCE96122D11ADE0016E8C0 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE96022D11ADE0016E8C0 /* CategoryEntity.swift */; };
+		D8BCE96522D11AFE0016E8C0 /* ProductEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE96422D11AFE0016E8C0 /* ProductEntity.swift */; };
+		D8BCE96922D11CA70016E8C0 /* ListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE96822D11CA70016E8C0 /* ListEntity.swift */; };
+		D8BCE96B22D120C40016E8C0 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE96A22D120C40016E8C0 /* ProductRepository.swift */; };
+		D8BCE99522D1242E0016E8C0 /* DungeonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCE99422D1242E0016E8C0 /* DungeonKit.framework */; };
 		D8D29E5E22CFE86000DCCA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D29E5D22CFE86000DCCA6B /* AppDelegate.swift */; };
 		D8D29E6022CFE86000DCCA6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D29E5F22CFE86000DCCA6B /* ViewController.swift */; };
 		D8D29E6322CFE86000DCCA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D29E6122CFE86000DCCA6B /* Main.storyboard */; };
@@ -52,6 +58,12 @@
 		D8BCE91F22CFF6530016E8C0 /* PaladinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PaladinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BCE92122CFF7030016E8C0 /* RogueKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RogueKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BCE92322CFF7080016E8C0 /* WizardKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WizardKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8BCE95C22D11A810016E8C0 /* BannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerEntity.swift; sourceTree = "<group>"; };
+		D8BCE96022D11ADE0016E8C0 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
+		D8BCE96422D11AFE0016E8C0 /* ProductEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntity.swift; sourceTree = "<group>"; };
+		D8BCE96822D11CA70016E8C0 /* ListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntity.swift; sourceTree = "<group>"; };
+		D8BCE96A22D120C40016E8C0 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		D8BCE99422D1242E0016E8C0 /* DungeonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DungeonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D29E5A22CFE86000DCCA6B /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D29E5D22CFE86000DCCA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D29E5F22CFE86000DCCA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BCE99522D1242E0016E8C0 /* DungeonKit.framework in Frameworks */,
 				D8BCE92422CFF7080016E8C0 /* WizardKit.framework in Frameworks */,
 				D8BCE92222CFF7030016E8C0 /* RogueKit.framework in Frameworks */,
 				D8BCE92022CFF6530016E8C0 /* PaladinKit.framework in Frameworks */,
@@ -101,6 +114,7 @@
 		7341040C2BAC44771EC0F9A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8BCE99422D1242E0016E8C0 /* DungeonKit.framework */,
 				D8BCE92322CFF7080016E8C0 /* WizardKit.framework */,
 				D8BCE92122CFF7030016E8C0 /* RogueKit.framework */,
 				D8BCE91F22CFF6530016E8C0 /* PaladinKit.framework */,
@@ -109,6 +123,65 @@
 				019849688AAAB98C95C25D52 /* Pods_LodjinhaUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8BCE95922D11A120016E8C0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D8BCE95A22D11A1A0016E8C0 /* Entity */,
+				D8BCE95B22D11A210016E8C0 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D8BCE95A22D11A1A0016E8C0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D8BCE95C22D11A810016E8C0 /* BannerEntity.swift */,
+				D8BCE96022D11ADE0016E8C0 /* CategoryEntity.swift */,
+				D8BCE96422D11AFE0016E8C0 /* ProductEntity.swift */,
+				D8BCE96822D11CA70016E8C0 /* ListEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D8BCE95B22D11A210016E8C0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D8BCE96A22D120C40016E8C0 /* ProductRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D8BCE96C22D122D80016E8C0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D8BCE96D22D122E30016E8C0 /* View */,
+				D8BCE96E22D122E80016E8C0 /* Interactor */,
+				D8BCE96F22D122F90016E8C0 /* Presenter */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D8BCE96D22D122E30016E8C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8BCE96E22D122E80016E8C0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D8BCE96F22D122F90016E8C0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		D8D29E5122CFE86000DCCA6B = {
@@ -164,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				D8D29E8D22CFEB5E00DCCA6B /* MainFiles */,
+				D8BCE95922D11A120016E8C0 /* Data */,
 				D8D29E8E22CFEF7A00DCCA6B /* Features */,
 			);
 			path = Source;
@@ -192,6 +266,7 @@
 		D8D29E8E22CFEF7A00DCCA6B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D8BCE96C22D122D80016E8C0 /* Home */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -412,8 +487,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BCE96922D11CA70016E8C0 /* ListEntity.swift in Sources */,
 				D8D29E6022CFE86000DCCA6B /* ViewController.swift in Sources */,
 				D8D29E5E22CFE86000DCCA6B /* AppDelegate.swift in Sources */,
+				D8BCE96522D11AFE0016E8C0 /* ProductEntity.swift in Sources */,
+				D8BCE96B22D120C40016E8C0 /* ProductRepository.swift in Sources */,
+				D8BCE95D22D11A810016E8C0 /* BannerEntity.swift in Sources */,
+				D8BCE96122D11ADE0016E8C0 /* CategoryEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Foundation
 import DungeonKit
 
 class HomePresenter: DKPresenter {
-    fileprivate var view: HomeViewControllerProtocol? { return self._view as? HomeViewControllerProtocol }
+    fileprivate var view: HomeViewControllerProtocol? { return self.getAbstractView() as? HomeViewControllerProtocol }
 }
 
 extension HomePresenter: HomePresenterProtocol {

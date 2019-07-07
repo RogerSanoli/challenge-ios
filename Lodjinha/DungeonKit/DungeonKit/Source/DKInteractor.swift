@@ -24,11 +24,15 @@ import Foundation
 
 open class DKInteractor: DKAbstractInteractor {
     
-    public var _presenter: DKAbstractPresenter!
+    internal var presenter: DKAbstractPresenter?
     
     public init() {}
     
     public func setPresenter(_ presenter: DKAbstractPresenter) {
-        self._presenter = presenter
+        self.presenter = presenter
+    }
+    
+    public func getAbstractPresenter() -> DKAbstractPresenter? {
+        return presenter
     }
 }

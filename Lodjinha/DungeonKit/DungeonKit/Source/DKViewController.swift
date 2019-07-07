@@ -24,7 +24,7 @@ import Foundation
 
 open class DKViewController<T: DKAbstractSceneFactory>: UIViewController, DKAbstractView {
 
-    public var _interactor: DKAbstractInteractor!
+    internal var interactor: DKAbstractInteractor?
     
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,10 @@ open class DKViewController<T: DKAbstractSceneFactory>: UIViewController, DKAbst
     }
     
     public func setInteractor(_ interactor: DKAbstractInteractor) {
-        self._interactor = interactor
+        self.interactor = interactor
+    }
+    
+    public func getAbstractInteractor() -> DKAbstractInteractor? {
+        return interactor
     }
 }

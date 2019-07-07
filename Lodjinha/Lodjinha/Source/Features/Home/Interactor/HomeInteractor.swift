@@ -10,7 +10,7 @@ import Foundation
 import DungeonKit
 
 class HomeInteractor: DKInteractor {
-    fileprivate var presenter: HomePresenterProtocol? { return self._presenter as? HomePresenterProtocol }
+    fileprivate var presenter: HomePresenterProtocol? { return self.getAbstractPresenter() as? HomePresenterProtocol }
 }
 
 extension HomeInteractor: HomeInteractorProtocol {

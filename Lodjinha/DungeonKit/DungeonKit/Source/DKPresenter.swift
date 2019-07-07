@@ -24,11 +24,15 @@ import Foundation
 
 open class DKPresenter: DKAbstractPresenter {
     
-    public weak var _view: DKAbstractView?
+    internal weak var view: DKAbstractView?
     
     public init() {}
     
     public func setView(_ view: DKAbstractView) {
-        self._view = view
+        self.view = view
+    }
+    
+    public func getAbstractView() -> DKAbstractView? {
+        return view
     }
 }

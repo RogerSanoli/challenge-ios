@@ -11,7 +11,7 @@ import DungeonKit
 
 class HomeViewController: DKViewController<HomeSceneFactory> {
     
-    fileprivate var interactor: HomeInteractorProtocol? { return self._interactor as? HomeInteractorProtocol }
+    fileprivate var interactor: HomeInteractorProtocol? { return self.getAbstractInteractor() as? HomeInteractorProtocol }
     
     override func viewDidLoad() {
         super.viewDidLoad()

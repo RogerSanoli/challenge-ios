@@ -22,25 +22,23 @@
 
 import Foundation
 
-public class DKViewController<T: DKAbstractInteractor, F: DKAbstractSceneFactory>: UIViewController, DKAbstractView {
+open class DKViewController<T: DKAbstractSceneFactory>: UIViewController, DKAbstractView {
 
-    internal var interactor: T!
+    public var _interactor: DKAbstractInteractor!
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
-        let factory: DKAbstractSceneFactory = F.init()
+        let factory: DKAbstractSceneFactory = T.init()
         let presenter = factory.generatePresenter()
         let interactor = factory.generateInteractor()
-        
-        
+ 
         interactor.setPresenter(presenter)
         presenter.setView(self)
         self.setInteractor(interactor)
     }
     
-    public func setInteractor(_ abstractInteractor: DKAbstractInteractor) {
-        guard let interactor = abstractInteractor as? T else { return }
-        self.interactor = interactor
+    public func setInteractor(_ interactor: DKAbstractInteractor) {
+        self._interactor = interactor
     }
 }

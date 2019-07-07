@@ -1,5 +1,7 @@
 //
-//  DKInteractor.swift
+//  UIViewControllerAnimationExtensions.swift
+//
+//  Copyright (c) 2018 Roger dos Santos Oliveira
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,15 +22,15 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
-open class DKInteractor: DKAbstractInteractor {
-    
-    public var _presenter: DKAbstractPresenter!
-    
-    public init() {}
-    
-    public func setPresenter(_ presenter: DKAbstractPresenter) {
-        self._presenter = presenter
+public extension UIViewController {
+    func setAnimation(_ animation: AnimationFactory.TransitionAnimation) {
+        self.transitioningDelegate = AnimationFactory.transitionForViewController(self, anim:animation)
     }
-}
+    
+    func present(_ viewControllerToPresent: UIViewController, animation: AnimationFactory.TransitionAnimation, completion: (() -> Void)? = nil) {
+        self.setAnimation(animation)
+        self.present(viewControllerToPresent, animated: true, completion: completion)
+    }
+} 

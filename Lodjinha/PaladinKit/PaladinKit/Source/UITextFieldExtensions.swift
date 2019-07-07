@@ -1,5 +1,7 @@
 //
-//  DKInteractor.swift
+//  UITextFieldExtensions.swift
+//
+//  Copyright (c) 2018 Roger dos Santos Oliveira
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -21,14 +23,11 @@
 //
 
 import Foundation
+import UIKit
 
-open class DKInteractor: DKAbstractInteractor {
-    
-    public var _presenter: DKAbstractPresenter!
-    
-    public init() {}
-    
-    public func setPresenter(_ presenter: DKAbstractPresenter) {
-        self._presenter = presenter
+extension UITextField {
+    @available(*, deprecated)
+    func setPlaceholderColor(placeholder:String, color:UIColor) {
+        self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor:color])
     }
 }

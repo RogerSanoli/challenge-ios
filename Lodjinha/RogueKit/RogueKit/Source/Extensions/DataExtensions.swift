@@ -1,5 +1,7 @@
 //
-//  DKInteractor.swift
+//  DataExtensions.swift
+//
+//  Copyright (c) 2018 Roger dos Santos Oliveira
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +24,20 @@
 
 import Foundation
 
-open class DKInteractor: DKAbstractInteractor {
+public extension Data {
+    var stringValue: String? {
+        if #available(iOS 11.0, *) {
+            if let  object = try? JSONSerialization.jsonObject(with: self, options: .allowFragments),
+                let string = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted, .sortedKeys]) {
+                return String(data: string, encoding: .utf8)
+            }
+        }
+        return String(data: self, encoding: .utf8)
+    }
     
-    public var _presenter: DKAbstractPresenter!
-    
-    public init() {}
-    
-    public func setPresenter(_ presenter: DKAbstractPresenter) {
-        self._presenter = presenter
+    mutating func append(string: String?) {
+        if let data = string?.data(using: .utf8, allowLossyConversion: false) {
+            append(data)
+        }
     }
 }

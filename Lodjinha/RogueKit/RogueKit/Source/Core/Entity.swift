@@ -1,5 +1,7 @@
 //
-//  DKInteractor.swift
+//  Entity.swift
+//
+//  Copyright (c) 2018 Roger dos Santos Oliveira
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +24,4 @@
 
 import Foundation
 
-open class DKInteractor: DKAbstractInteractor {
-    
-    public var _presenter: DKAbstractPresenter!
-    
-    public init() {}
-    
-    public func setPresenter(_ presenter: DKAbstractPresenter) {
-        self._presenter = presenter
-    }
-}
+public typealias Entity = Encodable & Decodable

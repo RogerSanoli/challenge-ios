@@ -1,5 +1,7 @@
 //
-//  DKInteractor.swift
+//  UIViewControllerExtensions.swift
+//
+//  Copyright (c) 2018 Roger dos Santos Oliveira
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +24,17 @@
 
 import Foundation
 
-open class DKInteractor: DKAbstractInteractor {
+extension UIViewController {
     
-    public var _presenter: DKAbstractPresenter!
-    
-    public init() {}
-    
-    public func setPresenter(_ presenter: DKAbstractPresenter) {
-        self._presenter = presenter
+    func alert(_ message: String, title: String? = nil, okButtonTitle: String? = nil, completion: (() -> Void)? = nil) {
+        
+        let alertVC: UIAlertController = UIAlertController(title: title ?? "", message: message, preferredStyle: .alert)
+        let okButton: UIAlertAction = UIAlertAction(title: okButtonTitle ?? "OK", style: .default) { (action) in
+            alertVC.dismiss(animated: true)
+            completion?()
+        }
+        
+        alertVC.addAction(okButton)
+        self.present(alertVC, animated: true, completion: nil)
     }
 }

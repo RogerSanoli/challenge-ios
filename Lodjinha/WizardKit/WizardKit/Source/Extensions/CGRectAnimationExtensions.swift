@@ -1,5 +1,7 @@
 //
-//  DKInteractor.swift
+//  CGRectAnimationExtensions.swift
+//
+//  Copyright (c) 2018 Roger dos Santos Oliveira
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,15 +22,26 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
-open class DKInteractor: DKAbstractInteractor {
-    
-    public var _presenter: DKAbstractPresenter!
-    
-    public init() {}
-    
-    public func setPresenter(_ presenter: DKAbstractPresenter) {
-        self._presenter = presenter
+public extension CGRect {
+    static func windowBounds(fullscreen:Bool?=false) -> CGRect {
+        
+        let screenbounds = UIScreen.main.bounds
+        var safeAreaHeight : CGFloat = 0
+        
+        if #available(iOS 11.0, *) {
+            safeAreaHeight = (UIApplication.shared.keyWindow?.safeAreaInsets.top)! + (UIApplication.shared.keyWindow?.safeAreaInsets.bottom)!
+        }
+        
+        if safeAreaHeight == 0 {
+            safeAreaHeight = 20
+        }
+        
+        if fullscreen == true {
+            safeAreaHeight = 0
+        }
+        
+        return CGRect(x: screenbounds.origin.x, y: screenbounds.origin.y, width: screenbounds.size.width, height: screenbounds.size.height - safeAreaHeight)
     }
-}
+} 

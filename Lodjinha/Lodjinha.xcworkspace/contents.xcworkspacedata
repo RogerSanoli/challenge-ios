@@ -8,6 +8,15 @@
       location = "group:DungeonKit/DungeonKit.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:PaladinKit/PaladinKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RogueKit/RogueKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WizardKit/WizardKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

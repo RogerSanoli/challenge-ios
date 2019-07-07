@@ -1,5 +1,7 @@
 //
-//  DKInteractor.swift
+//  CFAbsoluteTimeExtensions.swift
+//
+//  Copyright (c) 2018 Roger dos Santos Oliveira
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +24,25 @@
 
 import Foundation
 
-open class DKInteractor: DKAbstractInteractor {
-    
-    public var _presenter: DKAbstractPresenter!
-    
-    public init() {}
-    
-    public func setPresenter(_ presenter: DKAbstractPresenter) {
-        self._presenter = presenter
+public extension CFAbsoluteTime {
+    var humanReadable: String {
+        var suffix = "s"
+        var time = self
+        
+        if time > 100 {
+            suffix = "m"
+            time /= 60
+        } else if time < 1e-6 {
+            suffix = "ns"
+            time *= 1e9
+        } else if time < 1e-3 {
+            suffix = "µs"
+            time *= 1e6
+        } else if time < 1 {
+            suffix = "ms"
+            time *= 1000
+        }
+        
+        return "\(String(format: "%.2f", time))\(suffix)"
     }
 }

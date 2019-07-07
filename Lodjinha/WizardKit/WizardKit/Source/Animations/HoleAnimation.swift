@@ -33,7 +33,7 @@ class HoleAnimation: NSObject, UIViewControllerAnimationProtocol, CAAnimationDel
     private var initialRect: CGRect
     private var initialCircle: UIBezierPath
     private var finalCircle: UIBezierPath
-    private let duration = 0.2
+    private let duration = 0.25
     
     init(x: CGFloat, y: CGFloat, size: CGFloat) {
         self.x = x

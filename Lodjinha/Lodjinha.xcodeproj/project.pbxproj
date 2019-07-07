@@ -19,6 +19,8 @@
 		D82BF77522D168DC00CF8B0D /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF77422D168DC00CF8B0D /* HomePresenterProtocol.swift */; };
 		D82BF77722D16E8500CF8B0D /* HomeInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF77622D16E8500CF8B0D /* HomeInteractorProtocol.swift */; };
 		D82BF77922D16ED300CF8B0D /* HomeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF77822D16ED300CF8B0D /* HomeViewControllerProtocol.swift */; };
+		D8AE912422D298600055BBA0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8AE912322D298600055BBA0 /* Home.storyboard */; };
+		D8BB15FA22D2B259000BC359 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8BB15F922D2B259000BC359 /* Pacifico-Regular.ttf */; };
 		D8BCE95D22D11A810016E8C0 /* BannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE95C22D11A810016E8C0 /* BannerEntity.swift */; };
 		D8BCE96122D11ADE0016E8C0 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE96022D11ADE0016E8C0 /* CategoryEntity.swift */; };
 		D8BCE96522D11AFE0016E8C0 /* ProductEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE96422D11AFE0016E8C0 /* ProductEntity.swift */; };
@@ -70,6 +72,8 @@
 		D82BF77422D168DC00CF8B0D /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
 		D82BF77622D16E8500CF8B0D /* HomeInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorProtocol.swift; sourceTree = "<group>"; };
 		D82BF77822D16ED300CF8B0D /* HomeViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D8AE912322D298600055BBA0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D8BB15F922D2B259000BC359 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../../../../../../../../../../Downloads/Pacifico/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		D8BCE91F22CFF6530016E8C0 /* PaladinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PaladinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BCE92122CFF7030016E8C0 /* RogueKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RogueKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BCE92322CFF7080016E8C0 /* WizardKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WizardKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D8AE912522D2B20F0055BBA0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D8BB15F922D2B259000BC359 /* Pacifico-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D8BCE95922D11A120016E8C0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 		D8BCE96C22D122D80016E8C0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D8AE912322D298600055BBA0 /* Home.storyboard */,
 				D82BF76C22D14B0500CF8B0D /* HomeSceneFactory.swift */,
 				D8BCE96D22D122E30016E8C0 /* View */,
 				D8BCE96E22D122E80016E8C0 /* Interactor */,
@@ -269,6 +282,7 @@
 		D8D29E8C22CFEA9800DCCA6B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D8AE912522D2B20F0055BBA0 /* Fonts */,
 				D8D29E6422CFE86500DCCA6B /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -417,6 +431,8 @@
 				D8D29E6822CFE86500DCCA6B /* LaunchScreen.storyboard in Resources */,
 				D8D29E6522CFE86500DCCA6B /* Assets.xcassets in Resources */,
 				D8D29E6322CFE86000DCCA6B /* Main.storyboard in Resources */,
+				D8AE912422D298600055BBA0 /* Home.storyboard in Resources */,
+				D8BB15FA22D2B259000BC359 /* Pacifico-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

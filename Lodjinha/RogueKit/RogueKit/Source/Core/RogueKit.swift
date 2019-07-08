@@ -43,7 +43,7 @@ public final class RogueKit {
         headers[key] = value
     }
     
-    public static func request<T: Entity>(_ repository: RKRepository, completion: @escaping ResultCallback<T>) -> URLSessionDataTask? {
+    @discardableResult public static func request<T: Entity>(_ repository: RKRepository, completion: @escaping ResultCallback<T>) -> URLSessionDataTask? {
         do {
             let request = try repository.createRequest()
             let urlPath = "\(repository.domain)\(request.path)"
@@ -99,7 +99,7 @@ public final class RogueKit {
         
         let task = session.dataTask(with: request) { data, response, error in
             #if DEBUG
-            RKLogger.log(response: response, url: url, startTime: startTime, data: body)
+            RKLogger.log(response: response, url: url, startTime: startTime, data: data)
             #endif
             
             guard let response = response as? HTTPURLResponse else {

@@ -24,7 +24,7 @@
 
 import Foundation
 
-extension UIViewController {
+public extension UIViewController {
     
     func alert(_ message: String, title: String? = nil, okButtonTitle: String? = nil, completion: (() -> Void)? = nil) {
         

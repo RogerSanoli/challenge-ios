@@ -1,5 +1,5 @@
 //
-//  DataExtensions.swift
+//  DispatchQueueExtensions.swift
 //
 //  Copyright (c) 2018 Roger dos Santos Oliveira
 //
@@ -24,21 +24,21 @@
 
 import Foundation
 
-public extension Data {
-    var stringValue: String? {
-        
-        if #available(iOS 11.0, *) {
-            if let  object = try? JSONSerialization.jsonObject(with: self, options: .allowFragments),
-                let string = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted, .sortedKeys]) {
-                return String(data: string, encoding: .utf8)
-            }
+public extension DispatchQueue {
+    
+    static func safeSync(execute: () -> Void) {
+        if Thread.isMainThread {
+            execute()
+        } else {
+            DispatchQueue.main.sync(execute: execute)
         }
-        return String(data: self, encoding: .utf8)
     }
     
-    mutating func append(string: String?) {
-        if let data = string?.data(using: .utf8, allowLossyConversion: false) {
-            append(data)
+    static func async(execute: @escaping () -> Void) {
+        if Thread.isMainThread {
+            DispatchQueue.global(qos: .userInitiated).async(execute: execute)
+        } else {
+            execute()
         }
     }
 }

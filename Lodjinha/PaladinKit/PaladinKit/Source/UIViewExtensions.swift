@@ -25,7 +25,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable extension UIView {
+@IBDesignable public extension UIView {
     
     @IBInspectable var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
@@ -72,7 +72,7 @@ import UIKit
         return UINib(nibName: name, bundle: Bundle(for: type(of: view))).instantiate(withOwner: view, options: nil)[0] as! T
     }
     
-    public func insert(to view: UIView, top: Int = 0, left: Int = 0, right: Int = 0, bottom: Int = 0) {
+    func insert(to view: UIView, top: Int = 0, left: Int = 0, right: Int = 0, bottom: Int = 0) {
         view.insertSubview(self, at: 0)
         
         translatesAutoresizingMaskIntoConstraints = false

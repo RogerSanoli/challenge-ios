@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PaladinKit
 import WizardKit
 
 class ViewController: UIViewController {
@@ -20,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.perform(#selector(presentHome), with: nil, afterDelay: 3)
+        self.perform(#selector(presentHome), with: nil, afterDelay: 2)
     }
     
     @objc func presentHome() {

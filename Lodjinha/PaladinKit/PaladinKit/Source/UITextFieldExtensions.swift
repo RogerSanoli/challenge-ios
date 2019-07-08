@@ -25,8 +25,7 @@
 import Foundation
 import UIKit
 
-extension UITextField {
-    @available(*, deprecated)
+public extension UITextField {
     func setPlaceholderColor(placeholder:String, color:UIColor) {
         self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor:color])
     }

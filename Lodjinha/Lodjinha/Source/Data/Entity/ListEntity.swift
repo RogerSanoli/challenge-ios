@@ -9,6 +9,8 @@
 import Foundation
 import RogueKit
 
+public typealias ListResult<T: Entity> = Result<ListEntity<T>, Error>
+
 public struct ListEntity<T: Entity>: Entity {
     var data: [T]?
     var offset: Int?

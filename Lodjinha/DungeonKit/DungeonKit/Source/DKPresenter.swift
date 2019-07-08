@@ -33,6 +33,15 @@ open class DKPresenter: DKAbstractPresenter {
     }
     
     public func getAbstractView() -> DKAbstractView? {
+        precondition(Thread.isMainThread, "You can only access the view on main thread.")
         return view
+    }
+    
+    public func sync(execute: () -> Void) {
+        if Thread.isMainThread {
+            execute()
+        } else {
+            DispatchQueue.main.sync(execute: execute)
+        }
     }
 }

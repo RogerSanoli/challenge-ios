@@ -19,6 +19,8 @@
 		D82BF75222D1452000CF8B0D /* CFAbsoluteTimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF74F22D1452000CF8B0D /* CFAbsoluteTimeExtensions.swift */; };
 		D82BF75322D1452000CF8B0D /* DecodingError.ContextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF75022D1452000CF8B0D /* DecodingError.ContextExtensions.swift */; };
 		D82BF75422D1452000CF8B0D /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF75122D1452000CF8B0D /* DataExtensions.swift */; };
+		D83A84AF22D3D903008A131F /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A84AE22D3D903008A131F /* UIImageViewExtension.swift */; };
+		D83A84B122D3DA3D008A131F /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A84B022D3DA3D008A131F /* DispatchQueueExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		D82BF74F22D1452000CF8B0D /* CFAbsoluteTimeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFAbsoluteTimeExtensions.swift; sourceTree = "<group>"; };
 		D82BF75022D1452000CF8B0D /* DecodingError.ContextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingError.ContextExtensions.swift; sourceTree = "<group>"; };
 		D82BF75122D1452000CF8B0D /* DataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		D83A84AE22D3D903008A131F /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D83A84B022D3DA3D008A131F /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				D82BF74F22D1452000CF8B0D /* CFAbsoluteTimeExtensions.swift */,
 				D82BF75122D1452000CF8B0D /* DataExtensions.swift */,
 				D82BF75022D1452000CF8B0D /* DecodingError.ContextExtensions.swift */,
+				D83A84AE22D3D903008A131F /* UIImageViewExtension.swift */,
+				D83A84B022D3DA3D008A131F /* DispatchQueueExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -247,11 +253,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82BF75222D1452000CF8B0D /* CFAbsoluteTimeExtensions.swift in Sources */,
+				D83A84B122D3DA3D008A131F /* DispatchQueueExtensions.swift in Sources */,
 				D82BF74B22D1451200CF8B0D /* RKRequest.swift in Sources */,
 				D82BF75322D1452000CF8B0D /* DecodingError.ContextExtensions.swift in Sources */,
 				D82BF74922D1451200CF8B0D /* Entity.swift in Sources */,
 				D82BF74E22D1451200CF8B0D /* RKLogger.swift in Sources */,
 				D82BF75422D1452000CF8B0D /* DataExtensions.swift in Sources */,
+				D83A84AF22D3D903008A131F /* UIImageViewExtension.swift in Sources */,
 				D82BF74D22D1451200CF8B0D /* RogueKit.swift in Sources */,
 				D82BF74C22D1451200CF8B0D /* RKRepository.swift in Sources */,
 				D82BF74A22D1451200CF8B0D /* RKError.swift in Sources */,

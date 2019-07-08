@@ -43,6 +43,15 @@ open class DKViewController<T: DKAbstractSceneFactory>: UIViewController, DKAbst
     }
     
     public func getAbstractInteractor() -> DKAbstractInteractor? {
+        precondition(!Thread.isMainThread, "You cannot access the interactor from the main thread.")
         return interactor
+    }
+    
+    public func async(execute: @escaping () -> Void) {
+        if Thread.isMainThread {
+            DispatchQueue.global(qos: .userInitiated).async(execute: execute)
+        } else {
+            execute()
+        }
     }
 }

@@ -25,7 +25,7 @@
 import Foundation
 import UIKit
 
-extension UIScrollView {
+public extension UIScrollView {
     
     func registerForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -81,5 +81,9 @@ extension UIScrollView {
         }
         
         return nil
+    }
+    
+    var currentPage: Int {
+        return Int((self.contentOffset.x + (0.5 * self.frame.size.width)) / self.frame.width)
     }
 }

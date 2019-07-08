@@ -26,20 +26,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a Lodjinha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGE-dS-OYB">
                                 <rect key="frame" x="74" y="355" width="266" height="106"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="266" id="Dy9-2Y-FGN"/>
-                                    <constraint firstAttribute="height" constant="106" id="U9q-sf-VN6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="266" id="Dy9-2Y-FGN"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="106" id="U9q-sf-VN6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="por Roger Sanoli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Da-Go-ktQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="por Roger Oliveira" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Da-Go-ktQ">
                                 <rect key="frame" x="237" y="441" width="103" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="4kB-mP-ZRV"/>
-                                    <constraint firstAttribute="width" constant="103" id="jwl-0C-33D"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="jwl-0C-33D"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -48,25 +48,26 @@
                         <constraints>
                             <constraint firstItem="LGE-dS-OYB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="4Qc-BC-Uk8"/>
                             <constraint firstItem="LGE-dS-OYB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4bG-H2-rhT"/>
+                            <constraint firstItem="7Da-Go-ktQ" firstAttribute="leading" secondItem="LGE-dS-OYB" secondAttribute="leading" priority="250" id="edF-2j-a4p"/>
                             <constraint firstItem="7Da-Go-ktQ" firstAttribute="trailing" secondItem="LGE-dS-OYB" secondAttribute="trailing" id="f9P-hB-AAp"/>
                             <constraint firstItem="7Da-Go-ktQ" firstAttribute="top" secondItem="LGE-dS-OYB" secondAttribute="bottom" constant="-20" id="qd2-3j-hKX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="7aa-OY-HZ3" kind="presentation" identifier="home" id="jdV-dQ-dDM"/>
+                        <segue destination="6xU-qe-oS0" kind="presentation" identifier="home" id="wqS-BJ-lFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
         <!--Home-->
-        <scene sceneID="7Z7-1c-hQQ">
+        <scene sceneID="Swi-Ar-6gU">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="7aa-OY-HZ3" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m4q-6g-Ss6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Home" id="6xU-qe-oS0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bJ-69-tWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="21"/>
+            <point key="canvasLocation" x="878" y="21"/>
         </scene>
     </scenes>
 </document>

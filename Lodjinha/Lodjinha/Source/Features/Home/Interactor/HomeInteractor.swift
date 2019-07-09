@@ -27,7 +27,14 @@ extension HomeInteractor: HomeInteractorProtocol {
     }
     
     func loadCategories() {
-        
+        RogueKit.request(ProductRepository.categoryList) { [weak self] (result: ListResult<CategoryEntity>) in
+            switch result {
+            case let .success(categoryList):
+                self?.presenter?.processCategories(categoryList)
+            case let .failure(error):
+                self?.presenter?.requestFailed(error)
+            }
+        }
     }
     
     func loadBestSellers() {

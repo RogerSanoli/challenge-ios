@@ -12,4 +12,5 @@ import DungeonKit
 protocol HomePresenterProtocol: DKAbstractPresenter {
     func requestFailed(_ error: Error)
     func processBanners(_ bannerList: ListEntity<BannerEntity>)
+    func processCategories(_ categoryList: ListEntity<CategoryEntity>)
 }

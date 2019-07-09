@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RogueKit
 
 public struct BannerViewModel {
     

@@ -27,4 +27,11 @@ extension HomePresenter: HomePresenterProtocol {
             self.view?.presentBanner(viewModel)
         }
     }
+    
+    func processCategories(_ categoryList: ListEntity<CategoryEntity>) {
+        let viewModel = CategoryListViewModel(categoryList)
+        sync {
+            self.view?.presentCategoryList(viewModel)
+        }
+    }
 }

@@ -10,7 +10,8 @@ import Foundation
 import RogueKit
 
 public enum ProductRepository: RKRepository {
-    case bannerList
+    case bannerList,
+    categoryList
     
     public var domain: String { return "https://alodjinha.herokuapp.com" }
     
@@ -18,6 +19,8 @@ public enum ProductRepository: RKRepository {
         switch self {
         case .bannerList:
             return RKRequest.get("/banner")
+        case .categoryList:
+            return RKRequest.get("/categoria")
         }
     }
 }

@@ -16,6 +16,7 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
     
     fileprivate var interactor: HomeInteractorProtocol? {  return self.getAbstractInteractor() as? HomeInteractorProtocol }
     fileprivate var bannerViewModel: BannerViewModel?
+    fileprivate var categoryListViewModel: CategoryListViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,9 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
     
     private func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
-        //tableView.estimatedRowHeight = CGFloat.leastNonzeroMagnitude
         
         self.tableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "BannerCell")
+        self.tableView.register(UINib(nibName: "CategoryListCell", bundle: nil), forCellReuseIdentifier: "CategoryListCell")
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -43,10 +44,11 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
     
     private func refresh() {
         self.bannerViewModel = BannerViewModel(nil)
+        self.categoryListViewModel = CategoryListViewModel(nil)
         
         async {
             self.interactor?.loadBanners()
-            //self.interactor?.loadCategories()
+            self.interactor?.loadCategories()
             //self.interactor?.loadBestSellers()
         }
     }
@@ -62,11 +64,16 @@ extension HomeViewController: HomeViewControllerProtocol {
         self.bannerViewModel = viewModel
         self.tableView.reloadData()
     }
+    
+    func presentCategoryList(_ viewModel: CategoryListViewModel) {
+        self.categoryListViewModel = viewModel
+        self.tableView.reloadData()
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,6 +82,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let viewModel = self.bannerViewModel {
             bannerCell.setup(viewModel)
             return bannerCell
+        }
+        
+        if indexPath.row == 1,
+            let categoryListCell = tableView.dequeueReusableCell(withIdentifier: "CategoryListCell", for: indexPath) as? CategoryListCell,
+            let viewModel = self.categoryListViewModel {
+            categoryListCell.setup(viewModel)
+            
+            categoryListCell.onSelectCategory = { [weak self] (categoryID) in
+                print("CATEGORY SELECTED: \(categoryID)")
+            }
+            
+            return categoryListCell
         }
         
         assertionFailure("Invalid cell type.")

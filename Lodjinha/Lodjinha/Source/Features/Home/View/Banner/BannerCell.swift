@@ -55,6 +55,7 @@ class BannerCell: UITableViewCell {
     }
     
     private func setupTimer() {
+        timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(nextPage), userInfo: nil, repeats: true)
     }
     

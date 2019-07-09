@@ -12,4 +12,5 @@ import DungeonKit
 protocol HomeViewControllerProtocol: DKAbstractView {
     func alertError(_ message: String)
     func presentBanner(_ viewModel: BannerViewModel)
+    func presentCategoryList(_ viewModel: CategoryListViewModel)
 }

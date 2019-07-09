@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico-Regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="kFd-kr-Uio">
@@ -108,24 +113,91 @@
         <!--Sobre-->
         <scene sceneID="Xfx-YR-e0o">
             <objects>
-                <viewController id="dMV-rl-Le5" sceneMemberID="viewController">
+                <viewController id="dMV-rl-Le5" customClass="SobreViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ylP-bK-T1c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a Lodjinha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7B-H4-MhV">
+                                <rect key="frame" x="52" y="328.5" width="310" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="GhV-kD-v0n"/>
+                                    <constraint firstAttribute="width" constant="310" id="kRw-CI-nY2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="70"/>
+                                <color key="textColor" red="0.2901982367" green="0.29019212719999998" blue="0.29019629959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSobre" translatesAutoresizingMaskIntoConstraints="NO" id="cVA-aX-NKt">
+                                <rect key="frame" x="135.5" y="156.5" width="143" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="0mj-Pk-QuB"/>
+                                    <constraint firstAttribute="width" constant="143" id="8Ll-b5-iAk"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcc-Yg-tWS" userLabel="Container">
+                                <rect key="frame" x="0.0" y="645" width="414" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roger dos Santos Oliveira" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-jg-nUZ">
+                                        <rect key="frame" x="15" y="17" width="384" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="bzl-Tn-nGN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 de julho de 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-UG-Bup">
+                                        <rect key="frame" x="15" y="48" width="384" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="in7-Mt-6eu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1CO-UG-Bup" firstAttribute="leading" secondItem="Tcc-Yg-tWS" secondAttribute="leading" constant="15" id="4WA-JI-LpA"/>
+                                    <constraint firstAttribute="trailing" secondItem="1CO-UG-Bup" secondAttribute="trailing" constant="15" id="HGI-8F-5qI"/>
+                                    <constraint firstItem="1CO-UG-Bup" firstAttribute="top" secondItem="VUg-jg-nUZ" secondAttribute="bottom" constant="10" id="LJc-dS-EWD"/>
+                                    <constraint firstAttribute="bottom" secondItem="1CO-UG-Bup" secondAttribute="bottom" constant="15" id="PcF-HX-dtp"/>
+                                    <constraint firstItem="VUg-jg-nUZ" firstAttribute="leading" secondItem="Tcc-Yg-tWS" secondAttribute="leading" constant="15" id="TQB-aV-ToA"/>
+                                    <constraint firstAttribute="trailing" secondItem="VUg-jg-nUZ" secondAttribute="trailing" constant="15" id="cre-dS-ZfI"/>
+                                    <constraint firstAttribute="height" constant="80" id="nMd-C7-PW0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="m7B-H4-MhV" firstAttribute="top" secondItem="cVA-aX-NKt" secondAttribute="bottom" constant="20" id="9g9-cz-a3n"/>
+                            <constraint firstItem="m7B-H4-MhV" firstAttribute="centerY" secondItem="ylP-bK-T1c" secondAttribute="centerY" constant="-14" id="Fgd-8f-h9w"/>
+                            <constraint firstItem="cVA-aX-NKt" firstAttribute="centerX" secondItem="ylP-bK-T1c" secondAttribute="centerX" id="GUA-Ph-7hC"/>
+                            <constraint firstItem="Tcc-Yg-tWS" firstAttribute="trailing" secondItem="dVm-qp-DzJ" secondAttribute="trailing" id="Yvp-IY-qzc"/>
+                            <constraint firstItem="Tcc-Yg-tWS" firstAttribute="leading" secondItem="dVm-qp-DzJ" secondAttribute="leading" id="eWM-cm-sMG"/>
+                            <constraint firstItem="m7B-H4-MhV" firstAttribute="centerX" secondItem="ylP-bK-T1c" secondAttribute="centerX" id="exA-92-HO1"/>
+                            <constraint firstItem="dVm-qp-DzJ" firstAttribute="bottom" secondItem="Tcc-Yg-tWS" secondAttribute="bottom" id="ifW-Nm-0mk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dVm-qp-DzJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sobre" id="R8e-Fc-g3C"/>
+                    <connections>
+                        <outlet property="developerLabelContainer" destination="Tcc-Yg-tWS" id="eVV-YC-Whm"/>
+                        <outlet property="iconImage" destination="cVA-aX-NKt" id="X7r-tc-ndY"/>
+                        <outlet property="logoLabel" destination="m7B-H4-MhV" id="ree-iW-Zwn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ZZ-aq-hq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="204"/>
+            <point key="canvasLocation" x="637.68115942028987" y="203.57142857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="fillVertical" width="0.5" height="7"/>
         <image name="homeActive" width="25" height="25"/>
         <image name="homeDeselected" width="25" height="25"/>
+        <image name="logoSobre" width="71.5" height="76"/>
         <image name="tagDeselected" width="25" height="25"/>
         <image name="tagSelected" width="25" height="25"/>
     </resources>

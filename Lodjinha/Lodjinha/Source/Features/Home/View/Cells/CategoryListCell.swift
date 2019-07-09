@@ -13,6 +13,9 @@ class CategoryListCell: UITableViewCell {
  
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var loading: UIActivityIndicatorView!
+    @IBOutlet weak private var categoryTitleLabel: UILabel!
+    @IBOutlet weak private var topSeparator: UIView!
+    @IBOutlet weak private var bottomSeparator: UIView!
     
     private var categories: [CategoryViewModel]?
     
@@ -20,8 +23,11 @@ class CategoryListCell: UITableViewCell {
     
     public func setup(_ viewModel: CategoryListViewModel) {
         
-        collectionView.isHidden = viewModel.isLoading
-        loading.isHidden = !viewModel.isLoading
+        self.collectionView.isHidden = viewModel.isLoading
+        self.categoryTitleLabel.isHidden = viewModel.isLoading
+        self.topSeparator.isHidden = viewModel.isLoading
+        self.bottomSeparator.isHidden = viewModel.isLoading
+        self.loading.isHidden = !viewModel.isLoading
         
         guard !viewModel.isLoading else { return }
         

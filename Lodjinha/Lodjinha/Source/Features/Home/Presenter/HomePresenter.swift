@@ -34,4 +34,19 @@ extension HomePresenter: HomePresenterProtocol {
             self.view?.presentCategoryList(viewModel)
         }
     }
+    
+    func processBestSellers(_ bestSellerList: ListEntity<ProductEntity>) {
+        
+        guard let entityList = bestSellerList.data else { return }
+        
+        var viewModels: [BestSellerViewModel] = []
+        
+        for (index, entity) in entityList.enumerated() {
+            viewModels.append(BestSellerViewModel(entity, categoryVisible: index == 0))
+        }
+        
+        sync {
+            self.view?.presentBestSellers(viewModels)
+        }
+    }
 }

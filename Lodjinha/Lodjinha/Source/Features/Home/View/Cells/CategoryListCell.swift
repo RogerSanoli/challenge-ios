@@ -34,7 +34,7 @@ class CategoryListCell: UITableViewCell {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        let cellSize = CGSize(width: 80, height: 104)
+        let cellSize = CGSize(width: 90, height: 104)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = cellSize

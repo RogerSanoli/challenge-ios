@@ -11,7 +11,8 @@ import RogueKit
 
 public enum ProductRepository: RKRepository {
     case bannerList,
-    categoryList
+    categoryList,
+    bestSellerList
     
     public var domain: String { return "https://alodjinha.herokuapp.com" }
     
@@ -21,6 +22,8 @@ public enum ProductRepository: RKRepository {
             return RKRequest.get("/banner")
         case .categoryList:
             return RKRequest.get("/categoria")
+        case .bestSellerList:
+            return RKRequest.get("/produto/maisvendidos")
         }
     }
 }

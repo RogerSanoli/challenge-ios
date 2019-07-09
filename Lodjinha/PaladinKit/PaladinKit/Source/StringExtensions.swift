@@ -70,6 +70,18 @@ public extension String {
     func isEmptyOrWhitespace() -> Bool {
         return self.trimmingCharacters(in:.whitespaces).count == 0
     }
+    
+    func strikeThrough() -> NSAttributedString{
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self)
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0, attributeString.length))
+        return attributeString
+    }
+    
+    func underline() -> NSAttributedString{
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self)
+        attributeString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0, attributeString.length))
+        return attributeString
+    }
 }
 
 extension Optional where Wrapped == String {

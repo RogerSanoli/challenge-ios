@@ -38,6 +38,13 @@ extension HomeInteractor: HomeInteractorProtocol {
     }
     
     func loadBestSellers() {
-        
+        RogueKit.request(ProductRepository.bestSellerList) { [weak self] (result: ListResult<ProductEntity>) in
+            switch result {
+            case let .success(productList):
+                self?.presenter?.processBestSellers(productList)
+            case let .failure(error):
+                self?.presenter?.requestFailed(error)
+            }
+        }
     }
 }

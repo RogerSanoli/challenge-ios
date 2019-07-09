@@ -38,19 +38,37 @@
                                     <constraint firstAttribute="height" constant="37" id="AbN-E7-EvU"/>
                                 </constraints>
                             </pageControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fillVerticalLeft" translatesAutoresizingMaskIntoConstraints="NO" id="ton-o0-fjg">
+                                <rect key="frame" x="0.0" y="0.0" width="16" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="vBG-qa-FJJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fillVerticalRigth" translatesAutoresizingMaskIntoConstraints="NO" id="ozp-oA-Gc1">
+                                <rect key="frame" x="384" y="0.0" width="16" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="4dw-2x-YOj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ozp-oA-Gc1" firstAttribute="top" secondItem="1fl-jR-3Du" secondAttribute="top" id="1eI-oA-hw4"/>
                             <constraint firstAttribute="trailing" secondItem="tJa-3Q-Jlj" secondAttribute="trailing" id="94c-7f-Azz"/>
                             <constraint firstItem="FCC-rY-1R9" firstAttribute="centerX" secondItem="1fl-jR-3Du" secondAttribute="centerX" id="9LN-tu-vvq"/>
                             <constraint firstAttribute="bottom" secondItem="tJa-3Q-Jlj" secondAttribute="bottom" id="AT5-If-BuB"/>
                             <constraint firstAttribute="trailing" secondItem="F3E-yV-rqd" secondAttribute="trailing" id="BLs-X1-Ien"/>
                             <constraint firstAttribute="bottom" secondItem="F3E-yV-rqd" secondAttribute="bottom" constant="-6" id="BPd-Vb-w1r"/>
+                            <constraint firstAttribute="trailing" secondItem="ozp-oA-Gc1" secondAttribute="trailing" id="Fr4-Z2-pux"/>
                             <constraint firstItem="F3E-yV-rqd" firstAttribute="leading" secondItem="1fl-jR-3Du" secondAttribute="leading" id="M0i-tA-2I4"/>
                             <constraint firstAttribute="width" secondItem="1fl-jR-3Du" secondAttribute="height" multiplier="400:120" id="QRk-QH-9qL"/>
+                            <constraint firstItem="ton-o0-fjg" firstAttribute="top" secondItem="1fl-jR-3Du" secondAttribute="top" id="ZMd-7J-aZA"/>
+                            <constraint firstItem="ton-o0-fjg" firstAttribute="leading" secondItem="1fl-jR-3Du" secondAttribute="leading" id="g7v-M3-LM4"/>
                             <constraint firstItem="tJa-3Q-Jlj" firstAttribute="top" secondItem="1fl-jR-3Du" secondAttribute="top" id="gHu-lt-ZlT"/>
+                            <constraint firstAttribute="bottom" secondItem="ozp-oA-Gc1" secondAttribute="bottom" id="jvJ-LL-8fX"/>
                             <constraint firstItem="FCC-rY-1R9" firstAttribute="centerY" secondItem="1fl-jR-3Du" secondAttribute="centerY" id="n1n-W8-TtS"/>
                             <constraint firstItem="tJa-3Q-Jlj" firstAttribute="leading" secondItem="1fl-jR-3Du" secondAttribute="leading" id="ofx-CU-t5k"/>
+                            <constraint firstAttribute="bottom" secondItem="ton-o0-fjg" secondAttribute="bottom" id="vm3-HZ-vSs"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -69,4 +87,8 @@
             <point key="canvasLocation" x="-247.82608695652175" y="24.107142857142858"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="fillVerticalLeft" width="15.5" height="0.5"/>
+        <image name="fillVerticalRigth" width="15.5" height="0.5"/>
+    </resources>
 </document>

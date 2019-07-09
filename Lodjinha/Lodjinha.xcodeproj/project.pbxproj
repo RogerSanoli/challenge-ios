@@ -39,6 +39,13 @@
 		D84C359122D4E84000ACD7D9 /* BestSellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C359022D4E84000ACD7D9 /* BestSellerCell.swift */; };
 		D84C359322D4E84E00ACD7D9 /* BestSellerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C359222D4E84E00ACD7D9 /* BestSellerViewModel.swift */; };
 		D84C359522D4E85A00ACD7D9 /* BestSellerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84C359422D4E85A00ACD7D9 /* BestSellerCell.xib */; };
+		D8BA70F822D5260800CD8696 /* SobreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA70F622D5260800CD8696 /* SobreInteractor.swift */; };
+		D8BA70F922D5260800CD8696 /* SobreInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA70F722D5260800CD8696 /* SobreInteractorProtocol.swift */; };
+		D8BA70FC22D5260F00CD8696 /* SobrePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA70FA22D5260F00CD8696 /* SobrePresenterProtocol.swift */; };
+		D8BA70FD22D5260F00CD8696 /* SobrePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA70FB22D5260F00CD8696 /* SobrePresenter.swift */; };
+		D8BA710022D5261700CD8696 /* SobreViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA70FE22D5261700CD8696 /* SobreViewControllerProtocol.swift */; };
+		D8BA710122D5261700CD8696 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA70FF22D5261700CD8696 /* SobreViewController.swift */; };
+		D8BA710322D5261B00CD8696 /* SobreSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA710222D5261B00CD8696 /* SobreSceneFactory.swift */; };
 		D8BCE95D22D11A810016E8C0 /* BannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE95C22D11A810016E8C0 /* BannerEntity.swift */; };
 		D8BCE96122D11ADE0016E8C0 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE96022D11ADE0016E8C0 /* CategoryEntity.swift */; };
 		D8BCE96522D11AFE0016E8C0 /* ProductEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCE96422D11AFE0016E8C0 /* ProductEntity.swift */; };
@@ -124,6 +131,13 @@
 		D84C359022D4E84000ACD7D9 /* BestSellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCell.swift; sourceTree = "<group>"; };
 		D84C359222D4E84E00ACD7D9 /* BestSellerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerViewModel.swift; sourceTree = "<group>"; };
 		D84C359422D4E85A00ACD7D9 /* BestSellerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestSellerCell.xib; sourceTree = "<group>"; };
+		D8BA70F622D5260800CD8696 /* SobreInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreInteractor.swift; sourceTree = "<group>"; };
+		D8BA70F722D5260800CD8696 /* SobreInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreInteractorProtocol.swift; sourceTree = "<group>"; };
+		D8BA70FA22D5260F00CD8696 /* SobrePresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobrePresenterProtocol.swift; sourceTree = "<group>"; };
+		D8BA70FB22D5260F00CD8696 /* SobrePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobrePresenter.swift; sourceTree = "<group>"; };
+		D8BA70FE22D5261700CD8696 /* SobreViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D8BA70FF22D5261700CD8696 /* SobreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		D8BA710222D5261B00CD8696 /* SobreSceneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreSceneFactory.swift; sourceTree = "<group>"; };
 		D8BCE95C22D11A810016E8C0 /* BannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerEntity.swift; sourceTree = "<group>"; };
 		D8BCE96022D11ADE0016E8C0 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
 		D8BCE96422D11AFE0016E8C0 /* ProductEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntity.swift; sourceTree = "<group>"; };
@@ -273,6 +287,44 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D8BA70F222D525E000CD8696 /* Sobre */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA710222D5261B00CD8696 /* SobreSceneFactory.swift */,
+				D8BA70F322D525E800CD8696 /* Interactor */,
+				D8BA70F422D525EE00CD8696 /* Presenter */,
+				D8BA70F522D525F900CD8696 /* View */,
+			);
+			path = Sobre;
+			sourceTree = "<group>";
+		};
+		D8BA70F322D525E800CD8696 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA70F622D5260800CD8696 /* SobreInteractor.swift */,
+				D8BA70F722D5260800CD8696 /* SobreInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D8BA70F422D525EE00CD8696 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA70FB22D5260F00CD8696 /* SobrePresenter.swift */,
+				D8BA70FA22D5260F00CD8696 /* SobrePresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D8BA70F522D525F900CD8696 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA70FF22D5261700CD8696 /* SobreViewController.swift */,
+				D8BA70FE22D5261700CD8696 /* SobreViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D8BCE95922D11A120016E8C0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +438,7 @@
 			children = (
 				D83A848B22D2D8A2008A131F /* NavigationController */,
 				D83A847222D2D54B008A131F /* Home */,
+				D8BA70F222D525E000CD8696 /* Sobre */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -613,15 +666,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BA710122D5261700CD8696 /* SobreViewController.swift in Sources */,
 				D84C359322D4E84E00ACD7D9 /* BestSellerViewModel.swift in Sources */,
 				D83A84B922D3F90B008A131F /* CategoryListlViewModel.swift in Sources */,
+				D8BA710322D5261B00CD8696 /* SobreSceneFactory.swift in Sources */,
+				D8BA70FC22D5260F00CD8696 /* SobrePresenterProtocol.swift in Sources */,
 				D83A847722D2D644008A131F /* HomeSceneFactory.swift in Sources */,
 				D83A848A22D2D7DF008A131F /* MainNavigationController.swift in Sources */,
 				D83A84A922D39D18008A131F /* BannerViewModel.swift in Sources */,
 				D83A84B522D3F8E4008A131F /* CategoryListCell.swift in Sources */,
 				D8BCE96922D11CA70016E8C0 /* ListEntity.swift in Sources */,
+				D8BA710022D5261700CD8696 /* SobreViewControllerProtocol.swift in Sources */,
 				D84C359122D4E84000ACD7D9 /* BestSellerCell.swift in Sources */,
 				D8D29E6022CFE86000DCCA6B /* ViewController.swift in Sources */,
+				D8BA70FD22D5260F00CD8696 /* SobrePresenter.swift in Sources */,
 				D8D29E5E22CFE86000DCCA6B /* AppDelegate.swift in Sources */,
 				D8BCE96522D11AFE0016E8C0 /* ProductEntity.swift in Sources */,
 				D83A84AB22D3A71A008A131F /* BannerCell.swift in Sources */,
@@ -631,10 +689,12 @@
 				D8BCE95D22D11A810016E8C0 /* BannerEntity.swift in Sources */,
 				D8BCE96122D11ADE0016E8C0 /* CategoryEntity.swift in Sources */,
 				D83A848222D2D674008A131F /* HomePresenterProtocol.swift in Sources */,
+				D8BA70F922D5260800CD8696 /* SobreInteractorProtocol.swift in Sources */,
 				D83A847E22D2D66C008A131F /* HomeInteractorProtocol.swift in Sources */,
 				D83A848522D2D67A008A131F /* HomeViewController.swift in Sources */,
 				D83A848622D2D67A008A131F /* HomeViewControllerProtocol.swift in Sources */,
 				D83A848122D2D674008A131F /* HomePresenter.swift in Sources */,
+				D8BA70F822D5260800CD8696 /* SobreInteractor.swift in Sources */,
 				D84C358922D400CD00ACD7D9 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

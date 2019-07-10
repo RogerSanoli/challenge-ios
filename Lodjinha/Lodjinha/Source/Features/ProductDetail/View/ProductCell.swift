@@ -1,5 +1,5 @@
 //
-//  BestSellerCell.swift
+//  ProductCell.swift
 //  Lodjinha
 //
 //  Created by Roger Sanoli on 09/07/19.
@@ -10,24 +10,21 @@ import Foundation
 import UIKit
 import PaladinKit
 
-class BestSellerCell: UITableViewCell {
+class ProductCell: UITableViewCell {
     
-    @IBOutlet weak private var categoryLabel: UILabel!
-    @IBOutlet weak private var categoryLabelTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak private var categoryLabelHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var imageImageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var priceFromLabel: UILabel!
     @IBOutlet weak private var priceLabel: UILabel!
+    @IBOutlet weak private var subtitleLabel: UILabel!
+    @IBOutlet weak private var descriptionLabel: UILabel!
     
-    public func setup(_ viewModel: BestSellerViewModel) {
-        self.categoryLabel.isHidden = !viewModel.categoryVisible
-        self.categoryLabelTopConstraint.constant = viewModel.categoryVisible ? 10 : 0
-        self.categoryLabelHeightConstraint.constant = viewModel.categoryVisible ? 18 : 0
-        
+    public func setup(_ viewModel: ProductViewModel) {
         self.imageImageView.download(viewModel.imageURL, errorImage: "download_error")
         self.titleLabel.text = viewModel.title
         self.priceFromLabel.attributedText = viewModel.priceFrom
         self.priceLabel.text = viewModel.price
+        self.subtitleLabel.text = viewModel.subtitle
+        self.descriptionLabel.attributedText = viewModel.description
     }
 }

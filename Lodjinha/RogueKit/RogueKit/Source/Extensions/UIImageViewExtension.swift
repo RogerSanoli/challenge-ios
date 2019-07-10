@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+/*import Foundation
 
 private var taskKey: UInt8 = 10
 private var pathHashValueKey: UInt8 = 11
@@ -89,4 +89,4 @@ public extension UIImageView {
         task?.cancel()
         task = nil
     }
-}
+}*/

@@ -113,7 +113,7 @@
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="BestSellerCell" label="BestSellerCell">
-                <accessibilityTraits key="traits" button="YES" link="YES" image="YES" selected="YES" playsSound="YES" keyboardKey="YES" staticText="YES" summaryElement="YES" updatesFrequently="YES" searchField="YES" startsMediaSession="YES" adjustable="YES" allowsDirectInteraction="YES" causesPageTurn="YES" header="YES"/>
+                <accessibilityTraits key="traits" selected="YES" staticText="YES"/>
                 <bool key="isElement" value="YES"/>
             </accessibility>
             <connections>

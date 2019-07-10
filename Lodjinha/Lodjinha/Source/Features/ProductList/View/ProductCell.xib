@@ -86,7 +86,8 @@
                     <constraint firstAttribute="bottom" secondItem="7vG-st-BkH" secondAttribute="bottom" id="zxj-ds-Zaw"/>
                 </constraints>
             </tableViewCellContentView>
-            <accessibility key="accessibilityConfiguration" identifier="ProductCell">
+            <accessibility key="accessibilityConfiguration" identifier="ProductCell" label="ProductCell">
+                <accessibilityTraits key="traits" selected="YES" staticText="YES"/>
                 <bool key="isElement" value="YES"/>
             </accessibility>
             <connections>

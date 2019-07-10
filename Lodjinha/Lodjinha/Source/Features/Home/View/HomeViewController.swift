@@ -40,6 +40,7 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
     }
     
     private func setupTableView() {
+        self.tableView.isAccessibilityElement = true
         self.tableView.rowHeight = UITableView.automaticDimension
         
         self.tableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "BannerCell")

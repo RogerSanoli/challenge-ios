@@ -35,6 +35,7 @@ class ProductDetailViewController: DKViewController<ProductDetailSceneFactory> {
     }
     
     private func setupTableView() {
+        self.tableView.isAccessibilityElement = true
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.register(UINib(nibName: "ProductDetailCell", bundle: nil), forCellReuseIdentifier: "ProductDetailCell")
         self.tableView.dataSource = self

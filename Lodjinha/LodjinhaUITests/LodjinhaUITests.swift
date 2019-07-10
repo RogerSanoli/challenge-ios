@@ -19,32 +19,16 @@ class LodjinhaUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    /*func testProductDetail() {
-                
+    func testProductReserve() {
         let app = XCUIApplication()
-        sleep(4)
-        app.staticTexts["Mais Vendidos"].tap()
-        //children(matching: .other).matching(identifier: "productImage").element(boundBy: 0).tap()
-        sleep(4)
-
-        
-        //let homesceneElement = XCUIApplication().otherElements["HomeScene"]
-        //homesceneElement.tap()
-        
-        
-        
-        //let tabBarsQuery = XCUIApplication().tabBars
-        //tabBarsQuery.buttons["Sobre"].tap()
-        
-        //tabBarsQuery.buttons["Home"].tap()
-        
-        //XCUIDevice.shared.orientation = .portrait
-        //XCUIApplication().tables.cells["CategoryList"].children(matching: .other).matching(identifier: "CategoryCell").element(boundBy: 0).tap()
-        
-        //BestSeller
-        
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }*/
+        sleep(5)
+        app/*@START_MENU_TOKEN@*/.tables["BestSellerCell, BestSellerCell, BestSellerCell"]/*[[".otherElements[\"HomeScene\"].tables[\"BestSellerCell, BestSellerCell, BestSellerCell\"]",".tables[\"BestSellerCell, BestSellerCell, BestSellerCell\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.cells["CategoryList"].children(matching: .other).matching(identifier: "CategoryCell").element(boundBy: 0).tap()
+        sleep(5)
+        app/*@START_MENU_TOKEN@*/.tables["ProductCell, ProductCell, ProductCell, ProductCell, ProductCell, ProductCell"]/*[[".otherElements[\"ProductListScene\"].tables[\"ProductCell, ProductCell, ProductCell, ProductCell, ProductCell, ProductCell\"]",".tables[\"ProductCell, ProductCell, ProductCell, ProductCell, ProductCell, ProductCell\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.children(matching: .staticText).matching(identifier: "ProductCell").element(boundBy: 0).children(matching: .other).element(boundBy: 0).tap()
+        sleep(5)
+        app/*@START_MENU_TOKEN@*/.buttons["reserveButton"]/*[[".otherElements[\"ProductDetailScene\"].buttons[\"reserveButton\"]",".buttons[\"reserveButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.alerts.buttons["OK"].tap()
+    }
     
     func testSobre() {
         let app = XCUIApplication()
@@ -52,5 +36,4 @@ class LodjinhaUITests: XCTestCase {
         app.tabBars.buttons["Sobre"].tap()
         XCTAssertTrue(app.staticTexts["Roger dos Santos Oliveira"].exists)
     }
-
 }

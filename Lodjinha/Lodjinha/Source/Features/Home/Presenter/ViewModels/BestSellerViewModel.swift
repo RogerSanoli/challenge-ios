@@ -23,7 +23,7 @@ public struct BestSellerViewModel {
         self.productID = entity.id ?? 0
         self.categoryVisible = categoryVisible
         self.imageURL = entity.urlImagem ?? ""
-        self.title = "\(entity.nome ?? "") - \(entity.descricao ?? "")"
+        self.title = entity.nome ?? ""
         self.priceFrom = String(format: "De: %.2f", entity.precoDe ?? 0).replacingOccurrences(of: ".", with: ",").strikeThrough()
         self.price = String(format: "Por: %.2f", entity.precoPor ?? 0).replacingOccurrences(of: ".", with: ",")
     }

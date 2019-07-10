@@ -24,13 +24,17 @@ class SobreViewController: DKViewController<SobreSceneFactory> {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         iconImage.alpha = 0
         logoLabel.alpha = 0
         developerLabelContainer.alpha = 0
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
         UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseInOut, animations: { self.iconImage.alpha = 1 })
         UIView.animate(withDuration: 0.3, delay: 0.4, options: .curveEaseInOut, animations: { self.logoLabel.alpha = 1 })
         UIView.animate(withDuration: 0.3, delay: 0.6, options: .curveEaseInOut, animations: { self.developerLabelContainer.alpha = 1 })

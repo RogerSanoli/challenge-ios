@@ -17,6 +17,7 @@
 		D82BF76122D1459D00CF8B0D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF75A22D1459D00CF8B0D /* UIViewExtensions.swift */; };
 		D82BF76222D1459D00CF8B0D /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF75B22D1459D00CF8B0D /* UIScrollViewExtensions.swift */; };
 		D82BF76322D1459D00CF8B0D /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF75C22D1459D00CF8B0D /* UIImageExtensions.swift */; };
+		D8BA712122D55CBC00CD8696 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA712022D55CBC00CD8696 /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		D82BF75A22D1459D00CF8B0D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		D82BF75B22D1459D00CF8B0D /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		D82BF75C22D1459D00CF8B0D /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		D8BA712022D55CBC00CD8696 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				D82BF75622D1459D00CF8B0D /* UITextFieldExtensions.swift */,
 				D82BF75922D1459D00CF8B0D /* UIViewControllerExtensions.swift */,
 				D82BF75A22D1459D00CF8B0D /* UIViewExtensions.swift */,
+				D8BA712022D55CBC00CD8696 /* UIImageViewExtensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				D82BF76022D1459D00CF8B0D /* UIViewControllerExtensions.swift in Sources */,
 				D82BF76122D1459D00CF8B0D /* UIViewExtensions.swift in Sources */,
+				D8BA712122D55CBC00CD8696 /* UIImageViewExtensions.swift in Sources */,
 				D82BF76322D1459D00CF8B0D /* UIImageExtensions.swift in Sources */,
 				D82BF75F22D1459D00CF8B0D /* StringExtensions.swift in Sources */,
 				D82BF75D22D1459D00CF8B0D /* UITextFieldExtensions.swift in Sources */,

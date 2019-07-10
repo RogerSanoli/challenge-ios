@@ -23,11 +23,11 @@ class ViewController: UIViewController {
     }
     
     @objc func presentHome() {
-        self.performSegue(withIdentifier: "home", sender: nil)
+        self.performSegue(withIdentifier: "lodjinha", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "home" {
+        if segue.identifier == "lodjinha" {
             let bounds = CGRect.windowBounds()
             segue.destination.setAnimation(.hole(x: bounds.midX, y: bounds.midY, size: 0))
         }

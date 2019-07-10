@@ -17,7 +17,7 @@ class CategoryCell: UICollectionViewCell {
     private(set) var categoryID: Int = 0
     
     public func setup(_ viewModel: CategoryViewModel) {
-        self.categoryImage.download(viewModel.imageUrl)
+        self.categoryImage.download(viewModel.imageUrl, errorImage: "download_error")
         self.titleLabel.text = viewModel.title
         self.categoryID = viewModel.categoryID
     }

@@ -55,19 +55,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="6xU-qe-oS0" kind="presentation" identifier="home" id="wqS-BJ-lFv"/>
+                        <segue destination="6xU-qe-oS0" kind="presentation" identifier="lodjinha" id="wqS-BJ-lFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Home-->
+        <!--Lodjinha-->
         <scene sceneID="Swi-Ar-6gU">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="6xU-qe-oS0" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Lodjinha" id="6xU-qe-oS0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bJ-69-tWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="21"/>
+            <point key="canvasLocation" x="890" y="117"/>
         </scene>
     </scenes>
 </document>

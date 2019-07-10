@@ -15,7 +15,7 @@ public struct CategoryViewModel {
     
     init(_ entity: CategoryEntity) {
         self.title = entity.descricao ?? ""
-        self.imageUrl = entity.urlImagem ?? ""
+        self.imageUrl = (entity.urlImagem ?? "")
         self.categoryID = entity.id ?? 0
     }
 }

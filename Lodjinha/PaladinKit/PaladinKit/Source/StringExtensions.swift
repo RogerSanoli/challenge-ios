@@ -82,6 +82,15 @@ public extension String {
         attributeString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0, attributeString.length))
         return attributeString
     }
+    
+    func html() -> NSMutableAttributedString {
+        guard let data = data(using: .utf8) else { return NSMutableAttributedString() }
+        do {
+            return try NSMutableAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            return NSMutableAttributedString()
+        }
+    }
 }
 
 extension Optional where Wrapped == String {

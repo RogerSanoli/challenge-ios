@@ -12,9 +12,10 @@ import PaladinKit
 
 class HomeViewController: DKViewController<HomeSceneFactory> {
     
+    fileprivate var interactor: HomeInteractorProtocol? {  return self.getAbstractInteractor() as? HomeInteractorProtocol }
+    
     @IBOutlet weak fileprivate var tableView: UITableView!
     
-    fileprivate var interactor: HomeInteractorProtocol? {  return self.getAbstractInteractor() as? HomeInteractorProtocol }
     fileprivate var bannerViewModel: BannerViewModel?
     fileprivate var categoryListViewModel: CategoryListViewModel?
     fileprivate var bestSellerViewModels: [BestSellerViewModel]?
@@ -28,20 +29,25 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
     }
     
     private func setupNavigationController() {
+        
         let imageView = UIImageView(image:UIImage(named: "logoNavbar"))
         imageView.frame = CGRect(x: imageView.frame.origin.x, y: imageView.frame.origin.y, width: 112, height: 30)
         self.navigationItem.titleView = imageView
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Voltar"
+        navigationItem.backBarButtonItem = backItem
     }
     
     private func setupTableView() {
-        tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
         
         self.tableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "BannerCell")
         self.tableView.register(UINib(nibName: "CategoryListCell", bundle: nil), forCellReuseIdentifier: "CategoryListCell")
         self.tableView.register(UINib(nibName: "BestSellerCell", bundle: nil), forCellReuseIdentifier: "BestSellerCell")
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
     private func refresh() {
@@ -53,6 +59,14 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
             self.interactor?.loadBanners()
             self.interactor?.loadCategories()
             self.interactor?.loadBestSellers()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "productDetail",
+        let productID = sender as? Int,
+        let productDetailScene = segue.destination as? ProductDetailViewController {
+            productDetailScene.productID = productID
         }
     }
 }
@@ -119,6 +133,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let viewModel = self.bestSellerViewModels?[indexPath.row - 2]
         else { return }
         
-        print("PRODUCT SELECTED: \(viewModel.productID)")
+        self.performSegue(withIdentifier: "productDetail", sender: viewModel.productID)
     }
 }

@@ -19,7 +19,9 @@ public struct CategoryListViewModel {
         
         guard let categoryEntityList = entity?.data else { return }
         for categoryEntity in categoryEntityList {
-            categoryList.append(CategoryViewModel(categoryEntity))
+            if categoryEntity.id != nil {
+                categoryList.append(CategoryViewModel(categoryEntity))
+            }
         }
     }
 }

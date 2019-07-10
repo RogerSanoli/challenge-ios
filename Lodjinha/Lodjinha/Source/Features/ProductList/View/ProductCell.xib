@@ -86,6 +86,9 @@
                     <constraint firstAttribute="bottom" secondItem="7vG-st-BkH" secondAttribute="bottom" id="zxj-ds-Zaw"/>
                 </constraints>
             </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration" identifier="ProductCell">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <connections>
                 <outlet property="imageImageView" destination="HWT-dw-8O4" id="v6s-cG-Ife"/>
                 <outlet property="priceFromLabel" destination="Ygx-6z-a7q" id="LIj-TN-nC3"/>

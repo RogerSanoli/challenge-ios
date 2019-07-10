@@ -20,6 +20,9 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOF-vQ-20n">
                         <rect key="frame" x="15" y="10" width="78" height="18"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="78" id="X7d-y9-UOZ"/>
                             <constraint firstAttribute="height" constant="18" id="ffJ-fK-dRd"/>
@@ -90,6 +93,9 @@
                     <constraint firstItem="l0U-Vi-Yw2" firstAttribute="top" secondItem="2Fe-KQ-CyQ" secondAttribute="bottom" id="n3T-g0-X8u"/>
                 </constraints>
             </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration" identifier="CategoryList">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <connections>
                 <outlet property="bottomSeparator" destination="l0U-Vi-Yw2" id="pkd-dw-aFc"/>
                 <outlet property="categoryTitleLabel" destination="kOF-vQ-20n" id="8ur-HU-seV"/>

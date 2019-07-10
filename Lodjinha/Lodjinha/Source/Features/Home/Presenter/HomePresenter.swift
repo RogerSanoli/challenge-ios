@@ -42,7 +42,9 @@ extension HomePresenter: HomePresenterProtocol {
         var viewModels: [BestSellerViewModel] = []
         
         for (index, entity) in entityList.enumerated() {
-            viewModels.append(BestSellerViewModel(entity, categoryVisible: index == 0))
+            if entity.id != nil {
+                viewModels.append(BestSellerViewModel(entity, categoryVisible: index == 0))
+            }
         }
         
         sync {

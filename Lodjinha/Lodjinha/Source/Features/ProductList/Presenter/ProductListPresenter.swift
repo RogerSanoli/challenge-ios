@@ -26,7 +26,9 @@ extension ProductListPresenter: ProductListPresenterProtocol {
         guard let entityList = productList.data else { return }
         
         for entity in entityList {
-            productViewModels.append(ProductViewModel(entity))
+            if entity.id != nil {
+                productViewModels.append(ProductViewModel(entity))
+            }
         }
         
         sync {

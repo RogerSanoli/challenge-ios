@@ -52,6 +52,9 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="BannerCell">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="ozp-oA-Gc1" firstAttribute="top" secondItem="1fl-jR-3Du" secondAttribute="top" id="1eI-oA-hw4"/>
                             <constraint firstAttribute="trailing" secondItem="tJa-3Q-Jlj" secondAttribute="trailing" id="94c-7f-Azz"/>

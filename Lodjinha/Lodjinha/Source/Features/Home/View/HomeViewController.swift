@@ -40,6 +40,7 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
     }
     
     private func setupTableView() {
+        self.tableView.isAccessibilityElement = true
         self.tableView.rowHeight = UITableView.automaticDimension
         
         self.tableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "BannerCell")
@@ -67,12 +68,14 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
         let productID = sender as? Int,
         let productDetailScene = segue.destination as? ProductDetailViewController {
             productDetailScene.productID = productID
+            productDetailScene.hidesBottomBarWhenPushed = true
             return
         }
 
-        if segue.identifier == "categoryList",
+        if segue.identifier == "productList",
         let categoryData = sender as? (Int, String),
-        let categoryListScene = segue.destination as? CategoryListViewController {
+        let categoryListScene = segue.destination as? ProductListViewController {
+            categoryListScene.hidesBottomBarWhenPushed = true
             categoryListScene.categoryID = categoryData.0
             categoryListScene.categoryName = categoryData.1
         }
@@ -120,7 +123,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             categoryListCell.setup(viewModel)
             
             categoryListCell.onSelectCategory = { [weak self] (categoryID, categoryName) in
-                self?.performSegue(withIdentifier: "categoryList", sender: (categoryID, categoryName))
+                self?.performSegue(withIdentifier: "productList", sender: (categoryID, categoryName))
             }
             
             return categoryListCell

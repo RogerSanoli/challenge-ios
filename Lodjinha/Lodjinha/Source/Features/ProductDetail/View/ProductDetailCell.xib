@@ -111,6 +111,9 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <accessibility key="accessibilityConfiguration" identifier="ProductDetailCell">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <connections>
                 <outlet property="descriptionLabel" destination="DHW-13-1sA" id="l6b-mr-t5J"/>
                 <outlet property="imageImageView" destination="3Lg-YF-nWn" id="7Qk-Pm-CLH"/>

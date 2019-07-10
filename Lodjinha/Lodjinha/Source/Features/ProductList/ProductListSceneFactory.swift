@@ -9,15 +9,15 @@
 import Foundation
 import DungeonKit
 
-class CategoryListSceneFactory: DKAbstractSceneFactory {
+class ProductListSceneFactory: DKAbstractSceneFactory {
     
     required init() {}
     
     func generateInteractor() -> DKAbstractInteractor {
-        return CategoryListInteractor()
+        return ProductListInteractor()
     }
     
     func generatePresenter() -> DKAbstractPresenter {
-        return CategoryListPresenter()
+        return ProductListPresenter()
     }
 }

@@ -73,6 +73,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <accessibility key="accessibilityConfiguration" identifier="HomeScene">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="7tJ-TF-YHC" firstAttribute="bottom" secondItem="WEe-ai-JCJ" secondAttribute="bottom" id="JOj-2R-Uo3"/>
                             <constraint firstItem="WEe-ai-JCJ" firstAttribute="top" secondItem="7tJ-TF-YHC" secondAttribute="top" id="apA-fV-Ogl"/>
@@ -85,7 +89,7 @@
                     <connections>
                         <outlet property="tableView" destination="WEe-ai-JCJ" id="W9t-xJ-Wzc"/>
                         <segue destination="BCO-8V-yUM" kind="show" identifier="productDetail" id="NTm-WL-m2B"/>
-                        <segue destination="t91-9U-muI" kind="show" identifier="categoryList" id="1iR-nI-33P"/>
+                        <segue destination="t91-9U-muI" kind="show" identifier="productList" id="1iR-nI-33P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B83-Kc-7lY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,6 +232,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eq-7J-2TX">
                                         <rect key="frame" x="15" y="11" width="384" height="44"/>
                                         <color key="backgroundColor" red="0.3921568627" green="0.25098039220000001" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="reserveButton" label="reserveButton">
+                                            <accessibilityTraits key="traits" button="YES" selected="YES" staticText="YES"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Reservar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -256,6 +263,10 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ProductDetailScene">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="OzX-wJ-109" firstAttribute="bottom" secondItem="n6t-LZ-I8G" secondAttribute="bottom" id="187-29-Aby"/>
                             <constraint firstItem="n6t-LZ-I8G" firstAttribute="leading" secondItem="OzX-wJ-109" secondAttribute="leading" id="1qw-9c-Vei"/>
@@ -283,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="2233" y="-453"/>
         </scene>
-        <!--Category List View Controller-->
+        <!--Product List View Controller-->
         <scene sceneID="24a-ba-u6L">
             <objects>
-                <viewController id="t91-9U-muI" customClass="CategoryListViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t91-9U-muI" customClass="ProductListViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hdV-LN-rac">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,6 +316,10 @@
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ProductListScene">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="u7W-I7-qL1" firstAttribute="top" secondItem="NsX-DW-yTL" secondAttribute="top" id="0JK-Xj-qRC"/>
                             <constraint firstItem="u7W-I7-qL1" firstAttribute="leading" secondItem="NsX-DW-yTL" secondAttribute="leading" id="DV3-ny-JcG"/>
@@ -337,6 +352,6 @@
         <image name="tagSelected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dEP-2U-aKk"/>
+        <segue reference="NTm-WL-m2B"/>
     </inferredMetricsTieBreakers>
 </document>

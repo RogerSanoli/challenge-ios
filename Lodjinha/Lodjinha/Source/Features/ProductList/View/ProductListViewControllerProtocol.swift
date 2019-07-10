@@ -9,7 +9,7 @@
 import Foundation
 import DungeonKit
 
-protocol CategoryListViewControllerProtocol: DKAbstractView {
+protocol ProductListViewControllerProtocol: DKAbstractView {
     func alertError(_ message: String)
     func presentProductList(_ viewModelList: [ProductViewModel], hasMore: Bool)
 }

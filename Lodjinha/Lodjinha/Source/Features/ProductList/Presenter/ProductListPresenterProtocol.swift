@@ -9,7 +9,7 @@
 import Foundation
 import DungeonKit
 
-protocol CategoryListPresenterProtocol: DKAbstractPresenter {
+protocol ProductListPresenterProtocol: DKAbstractPresenter {
     func requestFailed(_ error: Error)
     func processProducts(_ productList: ListEntity<ProductEntity>, hasMore: Bool)
 }

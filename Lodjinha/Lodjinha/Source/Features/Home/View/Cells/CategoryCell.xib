@@ -39,6 +39,9 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="CategoryCell">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="n1d-I0-WYc" firstAttribute="top" secondItem="eJD-w5-oIN" secondAttribute="top" constant="7" id="5jm-sI-itc"/>
                             <constraint firstItem="E0e-Xh-Yys" firstAttribute="leading" secondItem="eJD-w5-oIN" secondAttribute="leading" id="J4p-TF-Mvr"/>

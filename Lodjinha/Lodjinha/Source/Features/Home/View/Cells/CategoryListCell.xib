@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryListCell" rowHeight="140" id="BtW-Ql-cow" customClass="CategoryListCell" customModule="Lodjinha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BtW-Ql-cow" id="fOO-1C-URh">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOF-vQ-20n">
+                        <rect key="frame" x="15" y="10" width="78" height="18"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="78" id="X7d-y9-UOZ"/>
+                            <constraint firstAttribute="height" constant="18" id="ffJ-fK-dRd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWu-ms-6gY" userLabel="TopSeparator">
+                        <rect key="frame" x="0.0" y="34" width="414" height="1"/>
+                        <color key="backgroundColor" red="0.92157477139999999" green="0.92155748609999999" blue="0.92156922819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bgY-42-0fT"/>
+                        </constraints>
+                    </view>
+                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Fe-KQ-CyQ">
+                        <rect key="frame" x="5" y="35" width="404" height="103.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="103.5" id="Ar4-Bt-5Y5"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9I3-Km-ACg">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="YjL-be-eWT">
+                        <rect key="frame" x="197" y="76.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="KtW-2b-hV0"/>
+                            <constraint firstAttribute="height" constant="20" id="fsa-zO-I0x"/>
+                        </constraints>
+                        <color key="color" red="0.39059019090000002" green="0.2516102791" blue="0.54904735090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </activityIndicatorView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0U-Vi-Yw2" userLabel="BottomSeparator">
+                        <rect key="frame" x="0.0" y="138.5" width="414" height="1"/>
+                        <color key="backgroundColor" red="0.92157477139999999" green="0.92155748609999999" blue="0.92156922819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="v1I-wJ-G7R"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fillVertical" translatesAutoresizingMaskIntoConstraints="NO" id="WkN-pT-h0l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="7"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="7" id="hHB-dK-TF4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XWu-ms-6gY" firstAttribute="top" secondItem="fOO-1C-URh" secondAttribute="top" constant="34" id="0fB-C4-WxN"/>
+                    <constraint firstAttribute="trailing" secondItem="2Fe-KQ-CyQ" secondAttribute="trailing" constant="5" id="2Of-cO-OA9"/>
+                    <constraint firstItem="kOF-vQ-20n" firstAttribute="top" secondItem="fOO-1C-URh" secondAttribute="top" constant="10" id="5gK-Cu-JQU"/>
+                    <constraint firstItem="YjL-be-eWT" firstAttribute="top" secondItem="XWu-ms-6gY" secondAttribute="bottom" constant="41.5" id="7JD-h1-rSZ"/>
+                    <constraint firstItem="kOF-vQ-20n" firstAttribute="leading" secondItem="fOO-1C-URh" secondAttribute="leading" constant="15" id="Cdg-Ee-OvO"/>
+                    <constraint firstItem="XWu-ms-6gY" firstAttribute="leading" secondItem="fOO-1C-URh" secondAttribute="leading" id="Mtg-CU-9hS"/>
+                    <constraint firstAttribute="trailing" secondItem="WkN-pT-h0l" secondAttribute="trailing" id="Vpr-j4-4w5"/>
+                    <constraint firstItem="l0U-Vi-Yw2" firstAttribute="leading" secondItem="fOO-1C-URh" secondAttribute="leading" id="WkO-Tu-mq1"/>
+                    <constraint firstAttribute="bottom" secondItem="l0U-Vi-Yw2" secondAttribute="bottom" id="Xdb-7H-CxZ"/>
+                    <constraint firstItem="WkN-pT-h0l" firstAttribute="top" secondItem="fOO-1C-URh" secondAttribute="top" id="Y9f-0c-Gn6"/>
+                    <constraint firstItem="2Fe-KQ-CyQ" firstAttribute="leading" secondItem="fOO-1C-URh" secondAttribute="leading" constant="5" id="aJx-QR-mrq"/>
+                    <constraint firstItem="WkN-pT-h0l" firstAttribute="leading" secondItem="fOO-1C-URh" secondAttribute="leading" id="aNI-Na-Kkf"/>
+                    <constraint firstItem="YjL-be-eWT" firstAttribute="centerX" secondItem="fOO-1C-URh" secondAttribute="centerX" id="fBL-6F-gsL"/>
+                    <constraint firstItem="2Fe-KQ-CyQ" firstAttribute="top" secondItem="XWu-ms-6gY" secondAttribute="bottom" id="h0y-I3-hOt"/>
+                    <constraint firstAttribute="trailing" secondItem="l0U-Vi-Yw2" secondAttribute="trailing" id="kqG-dS-SJE"/>
+                    <constraint firstAttribute="trailing" secondItem="XWu-ms-6gY" secondAttribute="trailing" id="l4d-Je-mna"/>
+                    <constraint firstItem="l0U-Vi-Yw2" firstAttribute="top" secondItem="2Fe-KQ-CyQ" secondAttribute="bottom" id="n3T-g0-X8u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration" identifier="CategoryList">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
+            <connections>
+                <outlet property="bottomSeparator" destination="l0U-Vi-Yw2" id="pkd-dw-aFc"/>
+                <outlet property="categoryTitleLabel" destination="kOF-vQ-20n" id="8ur-HU-seV"/>
+                <outlet property="collectionView" destination="2Fe-KQ-CyQ" id="R1t-Jx-kLK"/>
+                <outlet property="loading" destination="YjL-be-eWT" id="iL9-Jj-lEU"/>
+                <outlet property="topSeparator" destination="XWu-ms-6gY" id="r9g-0x-sM4"/>
+            </connections>
+            <point key="canvasLocation" x="-247.82608695652175" y="-44.196428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="fillVertical" width="0.5" height="7"/>
+    </resources>
+</document>

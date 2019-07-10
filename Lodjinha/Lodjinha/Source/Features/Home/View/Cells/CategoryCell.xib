@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="ye2-lQ-emH" customClass="CategoryCell" customModule="Lodjinha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="104"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-w5-oIN">
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="104"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1d-I0-WYc">
+                                <rect key="frame" x="15" y="7" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gtF-Dv-wwA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="E0e-Xh-Yys">
+                                <rect key="frame" x="0.0" y="72" width="90" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="7VY-S2-p7K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="CategoryCell">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="n1d-I0-WYc" firstAttribute="top" secondItem="eJD-w5-oIN" secondAttribute="top" constant="7" id="5jm-sI-itc"/>
+                            <constraint firstItem="E0e-Xh-Yys" firstAttribute="leading" secondItem="eJD-w5-oIN" secondAttribute="leading" id="J4p-TF-Mvr"/>
+                            <constraint firstAttribute="trailing" secondItem="E0e-Xh-Yys" secondAttribute="trailing" id="OUi-Ry-oxw"/>
+                            <constraint firstItem="n1d-I0-WYc" firstAttribute="leading" secondItem="eJD-w5-oIN" secondAttribute="leading" constant="15" id="lH6-vM-TT6"/>
+                            <constraint firstAttribute="bottom" secondItem="E0e-Xh-Yys" secondAttribute="bottom" constant="7" id="qty-xl-MFa"/>
+                            <constraint firstAttribute="trailing" secondItem="n1d-I0-WYc" secondAttribute="trailing" constant="15" id="u3G-Wt-8qm"/>
+                            <constraint firstItem="E0e-Xh-Yys" firstAttribute="top" secondItem="n1d-I0-WYc" secondAttribute="bottom" constant="5" id="xcn-Sj-hw2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eJD-w5-oIN" secondAttribute="bottom" id="GkG-1L-LQq"/>
+                <constraint firstItem="eJD-w5-oIN" firstAttribute="leading" secondItem="ye2-lQ-emH" secondAttribute="leading" id="c6d-nY-SNG"/>
+                <constraint firstAttribute="trailing" secondItem="eJD-w5-oIN" secondAttribute="trailing" id="oIf-Gc-JBN"/>
+                <constraint firstItem="eJD-w5-oIN" firstAttribute="top" secondItem="ye2-lQ-emH" secondAttribute="top" id="vSt-yD-jJD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="RoW-15-t0t"/>
+            <connections>
+                <outlet property="categoryImage" destination="n1d-I0-WYc" id="uiu-Lt-8Wa"/>
+                <outlet property="titleLabel" destination="E0e-Xh-Yys" id="L29-S6-H9C"/>
+            </connections>
+            <point key="canvasLocation" x="-290" y="30"/>
+        </collectionViewCell>
+    </objects>
+</document>

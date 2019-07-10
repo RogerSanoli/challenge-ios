@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D82BF71122D143A200CF8B0D /* WizardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82BF70722D143A200CF8B0D /* WizardKit.framework */; };
+		D82BF71622D143A200CF8B0D /* WizardKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF71522D143A200CF8B0D /* WizardKitTests.swift */; };
+		D82BF71822D143A200CF8B0D /* WizardKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D82BF70A22D143A200CF8B0D /* WizardKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D82BF72722D1445C00CF8B0D /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF72622D1445C00CF8B0D /* AnimationFactory.swift */; };
+		D82BF72A22D1446600CF8B0D /* UIViewControllerAnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF72822D1446600CF8B0D /* UIViewControllerAnimationExtensions.swift */; };
+		D82BF72B22D1446600CF8B0D /* CGRectAnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF72922D1446600CF8B0D /* CGRectAnimationExtensions.swift */; };
+		D82BF72E22D1447000CF8B0D /* AnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF72C22D1447000CF8B0D /* AnimationManager.swift */; };
+		D82BF72F22D1447000CF8B0D /* UIViewControllerAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF72D22D1447000CF8B0D /* UIViewControllerAnimationProtocol.swift */; };
+		D82BF73822D1447A00CF8B0D /* FlipAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF73022D1447A00CF8B0D /* FlipAnimation.swift */; };
+		D82BF73922D1447A00CF8B0D /* TranslateLeftAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF73122D1447A00CF8B0D /* TranslateLeftAnimation.swift */; };
+		D82BF73A22D1447A00CF8B0D /* HoleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF73222D1447A00CF8B0D /* HoleAnimation.swift */; };
+		D82BF73B22D1447A00CF8B0D /* NoneAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF73322D1447A00CF8B0D /* NoneAnimation.swift */; };
+		D82BF73C22D1447A00CF8B0D /* TranslateRightAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF73422D1447A00CF8B0D /* TranslateRightAnimation.swift */; };
+		D82BF73D22D1447A00CF8B0D /* TranslateTopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF73522D1447A00CF8B0D /* TranslateTopAnimation.swift */; };
+		D82BF73E22D1447A00CF8B0D /* TranslateBottomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF73622D1447A00CF8B0D /* TranslateBottomAnimation.swift */; };
+		D82BF73F22D1447A00CF8B0D /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BF73722D1447A00CF8B0D /* AlphaAnimation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D82BF71222D143A200CF8B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D82BF6FE22D143A200CF8B0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D82BF70622D143A200CF8B0D;
+			remoteInfo = WizardKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D82BF70722D143A200CF8B0D /* WizardKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WizardKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82BF70A22D143A200CF8B0D /* WizardKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WizardKit.h; sourceTree = "<group>"; };
+		D82BF70B22D143A200CF8B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82BF71022D143A200CF8B0D /* WizardKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WizardKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82BF71522D143A200CF8B0D /* WizardKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardKitTests.swift; sourceTree = "<group>"; };
+		D82BF71722D143A200CF8B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82BF72622D1445C00CF8B0D /* AnimationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationFactory.swift; sourceTree = "<group>"; };
+		D82BF72822D1446600CF8B0D /* UIViewControllerAnimationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerAnimationExtensions.swift; sourceTree = "<group>"; };
+		D82BF72922D1446600CF8B0D /* CGRectAnimationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectAnimationExtensions.swift; sourceTree = "<group>"; };
+		D82BF72C22D1447000CF8B0D /* AnimationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationManager.swift; sourceTree = "<group>"; };
+		D82BF72D22D1447000CF8B0D /* UIViewControllerAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerAnimationProtocol.swift; sourceTree = "<group>"; };
+		D82BF73022D1447A00CF8B0D /* FlipAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipAnimation.swift; sourceTree = "<group>"; };
+		D82BF73122D1447A00CF8B0D /* TranslateLeftAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateLeftAnimation.swift; sourceTree = "<group>"; };
+		D82BF73222D1447A00CF8B0D /* HoleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleAnimation.swift; sourceTree = "<group>"; };
+		D82BF73322D1447A00CF8B0D /* NoneAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoneAnimation.swift; sourceTree = "<group>"; };
+		D82BF73422D1447A00CF8B0D /* TranslateRightAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateRightAnimation.swift; sourceTree = "<group>"; };
+		D82BF73522D1447A00CF8B0D /* TranslateTopAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateTopAnimation.swift; sourceTree = "<group>"; };
+		D82BF73622D1447A00CF8B0D /* TranslateBottomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateBottomAnimation.swift; sourceTree = "<group>"; };
+		D82BF73722D1447A00CF8B0D /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D82BF70422D143A200CF8B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82BF70D22D143A200CF8B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82BF71122D143A200CF8B0D /* WizardKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D82BF6FD22D143A200CF8B0D = {
+			isa = PBXGroup;
+			children = (
+				D82BF70922D143A200CF8B0D /* WizardKit */,
+				D82BF71422D143A200CF8B0D /* WizardKitTests */,
+				D82BF70822D143A200CF8B0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D82BF70822D143A200CF8B0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D82BF70722D143A200CF8B0D /* WizardKit.framework */,
+				D82BF71022D143A200CF8B0D /* WizardKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D82BF70922D143A200CF8B0D /* WizardKit */ = {
+			isa = PBXGroup;
+			children = (
+				D82BF72122D1440600CF8B0D /* Source */,
+				D82BF70A22D143A200CF8B0D /* WizardKit.h */,
+				D82BF70B22D143A200CF8B0D /* Info.plist */,
+			);
+			path = WizardKit;
+			sourceTree = "<group>";
+		};
+		D82BF71422D143A200CF8B0D /* WizardKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D82BF71522D143A200CF8B0D /* WizardKitTests.swift */,
+				D82BF71722D143A200CF8B0D /* Info.plist */,
+			);
+			path = WizardKitTests;
+			sourceTree = "<group>";
+		};
+		D82BF72122D1440600CF8B0D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D82BF72222D1440F00CF8B0D /* Animations */,
+				D82BF72522D1442C00CF8B0D /* Core */,
+				D82BF72422D1442300CF8B0D /* Extensions */,
+				D82BF72322D1441900CF8B0D /* Factory */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D82BF72222D1440F00CF8B0D /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D82BF73722D1447A00CF8B0D /* AlphaAnimation.swift */,
+				D82BF73022D1447A00CF8B0D /* FlipAnimation.swift */,
+				D82BF73222D1447A00CF8B0D /* HoleAnimation.swift */,
+				D82BF73322D1447A00CF8B0D /* NoneAnimation.swift */,
+				D82BF73622D1447A00CF8B0D /* TranslateBottomAnimation.swift */,
+				D82BF73122D1447A00CF8B0D /* TranslateLeftAnimation.swift */,
+				D82BF73422D1447A00CF8B0D /* TranslateRightAnimation.swift */,
+				D82BF73522D1447A00CF8B0D /* TranslateTopAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D82BF72322D1441900CF8B0D /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D82BF72622D1445C00CF8B0D /* AnimationFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		D82BF72422D1442300CF8B0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D82BF72922D1446600CF8B0D /* CGRectAnimationExtensions.swift */,
+				D82BF72822D1446600CF8B0D /* UIViewControllerAnimationExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D82BF72522D1442C00CF8B0D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D82BF72C22D1447000CF8B0D /* AnimationManager.swift */,
+				D82BF72D22D1447000CF8B0D /* UIViewControllerAnimationProtocol.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D82BF70222D143A200CF8B0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82BF71822D143A200CF8B0D /* WizardKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D82BF70622D143A200CF8B0D /* WizardKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82BF71B22D143A200CF8B0D /* Build configuration list for PBXNativeTarget "WizardKit" */;
+			buildPhases = (
+				D82BF70222D143A200CF8B0D /* Headers */,
+				D82BF70322D143A200CF8B0D /* Sources */,
+				D82BF70422D143A200CF8B0D /* Frameworks */,
+				D82BF70522D143A200CF8B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WizardKit;
+			productName = WizardKit;
+			productReference = D82BF70722D143A200CF8B0D /* WizardKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D82BF70F22D143A200CF8B0D /* WizardKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82BF71E22D143A200CF8B0D /* Build configuration list for PBXNativeTarget "WizardKitTests" */;
+			buildPhases = (
+				D82BF70C22D143A200CF8B0D /* Sources */,
+				D82BF70D22D143A200CF8B0D /* Frameworks */,
+				D82BF70E22D143A200CF8B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D82BF71322D143A200CF8B0D /* PBXTargetDependency */,
+			);
+			name = WizardKitTests;
+			productName = WizardKitTests;
+			productReference = D82BF71022D143A200CF8B0D /* WizardKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D82BF6FE22D143A200CF8B0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Lollipepper;
+				TargetAttributes = {
+					D82BF70622D143A200CF8B0D = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					D82BF70F22D143A200CF8B0D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D82BF70122D143A200CF8B0D /* Build configuration list for PBXProject "WizardKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D82BF6FD22D143A200CF8B0D;
+			productRefGroup = D82BF70822D143A200CF8B0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D82BF70622D143A200CF8B0D /* WizardKit */,
+				D82BF70F22D143A200CF8B0D /* WizardKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D82BF70522D143A200CF8B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82BF70E22D143A200CF8B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D82BF70322D143A200CF8B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82BF73B22D1447A00CF8B0D /* NoneAnimation.swift in Sources */,
+				D82BF72F22D1447000CF8B0D /* UIViewControllerAnimationProtocol.swift in Sources */,
+				D82BF72E22D1447000CF8B0D /* AnimationManager.swift in Sources */,
+				D82BF73D22D1447A00CF8B0D /* TranslateTopAnimation.swift in Sources */,
+				D82BF72B22D1446600CF8B0D /* CGRectAnimationExtensions.swift in Sources */,
+				D82BF73C22D1447A00CF8B0D /* TranslateRightAnimation.swift in Sources */,
+				D82BF73822D1447A00CF8B0D /* FlipAnimation.swift in Sources */,
+				D82BF73922D1447A00CF8B0D /* TranslateLeftAnimation.swift in Sources */,
+				D82BF73E22D1447A00CF8B0D /* TranslateBottomAnimation.swift in Sources */,
+				D82BF72722D1445C00CF8B0D /* AnimationFactory.swift in Sources */,
+				D82BF73F22D1447A00CF8B0D /* AlphaAnimation.swift in Sources */,
+				D82BF73A22D1447A00CF8B0D /* HoleAnimation.swift in Sources */,
+				D82BF72A22D1446600CF8B0D /* UIViewControllerAnimationExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82BF70C22D143A200CF8B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82BF71622D143A200CF8B0D /* WizardKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D82BF71322D143A200CF8B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D82BF70622D143A200CF8B0D /* WizardKit */;
+			targetProxy = D82BF71222D143A200CF8B0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D82BF71922D143A200CF8B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D82BF71A22D143A200CF8B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D82BF71C22D143A200CF8B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9QSTG3492K;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WizardKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lollipepper.WizardKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D82BF71D22D143A200CF8B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9QSTG3492K;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WizardKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lollipepper.WizardKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D82BF71F22D143A200CF8B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QSTG3492K;
+				INFOPLIST_FILE = WizardKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lollipepper.WizardKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D82BF72022D143A200CF8B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QSTG3492K;
+				INFOPLIST_FILE = WizardKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lollipepper.WizardKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D82BF70122D143A200CF8B0D /* Build configuration list for PBXProject "WizardKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82BF71922D143A200CF8B0D /* Debug */,
+				D82BF71A22D143A200CF8B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82BF71B22D143A200CF8B0D /* Build configuration list for PBXNativeTarget "WizardKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82BF71C22D143A200CF8B0D /* Debug */,
+				D82BF71D22D143A200CF8B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82BF71E22D143A200CF8B0D /* Build configuration list for PBXNativeTarget "WizardKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82BF71F22D143A200CF8B0D /* Debug */,
+				D82BF72022D143A200CF8B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D82BF6FE22D143A200CF8B0D /* Project object */;
+}

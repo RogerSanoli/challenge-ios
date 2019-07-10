@@ -11,7 +11,7 @@ import DungeonKit
 
 protocol ProductDetailViewControllerProtocol: DKAbstractView {
     func alertError(_ message: String)
-    func presentProduct(_ viewModel: ProductViewModel)
+    func presentProduct(_ viewModel: ProductDetailViewModel)
     func lockReserveButton()
     func alertProductReserved()
 }

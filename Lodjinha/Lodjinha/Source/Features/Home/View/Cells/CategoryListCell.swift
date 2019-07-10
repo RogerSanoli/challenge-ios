@@ -19,7 +19,7 @@ class CategoryListCell: UITableViewCell {
     
     private var categories: [CategoryViewModel]?
     
-    public var onSelectCategory: ((_ categoryID: Int) -> Void)?
+    public var onSelectCategory: ((_ categoryID: Int, _ categoryName: String) -> Void)?
     
     public func setup(_ viewModel: CategoryListViewModel) {
         
@@ -74,8 +74,8 @@ extension CategoryListCell: UICollectionViewDelegate, UICollectionViewDataSource
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let categoryID = categories?[indexPath.row].categoryID {
-            self.onSelectCategory?(categoryID)
+        if let categoryViewModel = categories?[indexPath.row] {
+            self.onSelectCategory?(categoryViewModel.categoryID, categoryViewModel.title)
         }
     }
 }

@@ -9,6 +9,6 @@
 import Foundation
 import DungeonKit
 
-protocol CategoryListInteractorProtocol: DKAbstractInteractor {
+protocol ProductListInteractorProtocol: DKAbstractInteractor {
     func loadNextPage(_ categoryID: Int)
 }

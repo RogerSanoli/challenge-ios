@@ -9,12 +9,12 @@
 import Foundation
 import DungeonKit
 
-class CategoryListPresenter: DKPresenter {
-    fileprivate var view: CategoryListViewControllerProtocol? { return self.getAbstractView() as? CategoryListViewControllerProtocol }
+class ProductListPresenter: DKPresenter {
+    fileprivate var view: ProductListViewControllerProtocol? { return self.getAbstractView() as? ProductListViewControllerProtocol }
     fileprivate var productViewModels: [ProductViewModel] = []
 }
 
-extension CategoryListPresenter: CategoryListPresenterProtocol {
+extension ProductListPresenter: ProductListPresenterProtocol {
     func requestFailed(_ error: Error) {
         sync {
             self.view?.alertError(error.localizedDescription)

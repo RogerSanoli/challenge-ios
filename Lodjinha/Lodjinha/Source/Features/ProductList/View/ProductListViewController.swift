@@ -9,9 +9,9 @@
 import Foundation
 import DungeonKit
 
-class CategoryListViewController: DKViewController<CategoryListSceneFactory> {
+class ProductListViewController: DKViewController<ProductListSceneFactory> {
     
-    fileprivate var interactor: CategoryListInteractorProtocol? { return self.getAbstractInteractor() as? CategoryListInteractorProtocol }
+    fileprivate var interactor: ProductListInteractorProtocol? { return self.getAbstractInteractor() as? ProductListInteractorProtocol }
     
     @IBOutlet weak fileprivate var tableView: UITableView!
     @IBOutlet weak fileprivate var loading: UIActivityIndicatorView!
@@ -68,7 +68,7 @@ class CategoryListViewController: DKViewController<CategoryListSceneFactory> {
     }
 }
 
-extension CategoryListViewController: CategoryListViewControllerProtocol {
+extension ProductListViewController: ProductListViewControllerProtocol {
     func alertError(_ message: String) {
         self.loading.isHidden = true
         self.alert(message)
@@ -89,7 +89,7 @@ extension CategoryListViewController: CategoryListViewControllerProtocol {
     }
 }
 
-extension CategoryListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.productViewModels.count
     }

@@ -19,7 +19,7 @@ class ProductDetailViewController: DKViewController<ProductDetailSceneFactory> {
     @IBOutlet weak private var loading: UIActivityIndicatorView!
     
     public var productID: Int?
-    private var productViewModel: ProductViewModel?
+    private var productViewModel: ProductDetailViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class ProductDetailViewController: DKViewController<ProductDetailSceneFactory> {
     
     private func setupTableView() {
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
+        self.tableView.register(UINib(nibName: "ProductDetailCell", bundle: nil), forCellReuseIdentifier: "ProductDetailCell")
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
@@ -64,7 +64,7 @@ extension ProductDetailViewController: ProductDetailViewControllerProtocol {
         self.alert(message)
     }
     
-    func presentProduct(_ viewModel: ProductViewModel) {
+    func presentProduct(_ viewModel: ProductDetailViewModel) {
         self.productViewModel = viewModel
         self.navigationItem.title = viewModel.categoryTitle
         self.loading.isHidden = true
@@ -90,7 +90,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let productCell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell,
+        if let productCell = tableView.dequeueReusableCell(withIdentifier: "ProductDetailCell", for: indexPath) as? ProductDetailCell,
             let viewModel = self.productViewModel {
             productCell.setup(viewModel)
             return productCell

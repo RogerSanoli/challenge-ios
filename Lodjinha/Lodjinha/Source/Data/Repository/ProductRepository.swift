@@ -14,7 +14,8 @@ public enum ProductRepository: RKRepository {
     categoryList,
     bestSellerList,
     productDetail(productID: Int),
-    reserveProduct(productID: Int)
+    reserveProduct(productID: Int),
+    productList(offset: Int, limit: Int, categoriaId: Int)
     
     public var domain: String { return "https://alodjinha.herokuapp.com" }
     
@@ -30,6 +31,8 @@ public enum ProductRepository: RKRepository {
             return RKRequest.get("/produto/\(productID)")
         case let .reserveProduct(productID):
             return RKRequest.post("/produto/\(productID)")
+        case let .productList(offset, limit, categoriaId):
+            return RKRequest.get("/produto?offset=\(offset)&limit=\(limit)&categoriaId=\(categoriaId)")
         }
     }
 }

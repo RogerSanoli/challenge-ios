@@ -21,7 +21,7 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
     }
     
     func processProduct(_ product: ProductEntity) {
-        let viewModel = ProductViewModel(product)
+        let viewModel = ProductDetailViewModel(product)
         sync {
             self.view?.presentProduct(viewModel)
         }

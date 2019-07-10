@@ -15,9 +15,4 @@ public struct ListEntity<T: Entity>: Entity {
     var data: [T]?
     var offset: Int?
     var total: Int?
-    
-    init(offset: Int, total: Int) {
-        self.offset = offset
-        self.total = total
-    }
 }

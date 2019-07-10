@@ -67,6 +67,14 @@ class HomeViewController: DKViewController<HomeSceneFactory> {
         let productID = sender as? Int,
         let productDetailScene = segue.destination as? ProductDetailViewController {
             productDetailScene.productID = productID
+            return
+        }
+
+        if segue.identifier == "categoryList",
+        let categoryData = sender as? (Int, String),
+        let categoryListScene = segue.destination as? CategoryListViewController {
+            categoryListScene.categoryID = categoryData.0
+            categoryListScene.categoryName = categoryData.1
         }
     }
 }
@@ -111,8 +119,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let viewModel = self.categoryListViewModel {
             categoryListCell.setup(viewModel)
             
-            categoryListCell.onSelectCategory = { [weak self] (categoryID) in
-                print("CATEGORY SELECTED: \(categoryID)")
+            categoryListCell.onSelectCategory = { [weak self] (categoryID, categoryName) in
+                self?.performSegue(withIdentifier: "categoryList", sender: (categoryID, categoryName))
             }
             
             return categoryListCell

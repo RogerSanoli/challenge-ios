@@ -14,7 +14,7 @@ public extension UIImageView {
     
     func download(_ imageURL: String, errorImage: String? = nil, showLoading: Bool = false) {
         guard let url = URL(string: imageURL) else {
-            self.image = UIImage(named: errorImage ?? "")
+            DispatchQueue.main.async { self.image = UIImage(named: errorImage ?? "") }
             return
         }
         
@@ -32,7 +32,7 @@ public extension UIImageView {
         
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             if error != nil {
-                self.image = UIImage(named: errorImage ?? "")
+                DispatchQueue.main.async { self.image = UIImage(named: errorImage ?? "") }
                 return
             }
             
